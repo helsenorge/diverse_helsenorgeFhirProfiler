@@ -21,10 +21,10 @@
         "constraint": [
           {
             "key": "cancelationReason-inv",
-            "human": "Cancelation reason MUST be set when status=cancelled",
+            "human": "Cancelation reason MUST be set when status=cancelled and the appointment is not partOf another appointment",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "(status = 'cancelled') implies cancelationReason.exists()"
+            "expression": "(status = 'cancelled' and partOf.empty()) implies cancelationReason.exists()"
           },
           {
             "key": "contained-location-must-have-managingorganization",
@@ -76,11 +76,18 @@
             "expression": "(serviceCategory.coding.where(code='7').empty() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or contained.ofType(Location).all(type.coding.where(system='http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code='PTRES' or code='OF')).exists())) and (serviceCategory.coding.where(code='27' or code='30').empty() or (contained.ofType(Location).all(type.coding.where(system='http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code='HU' or code='HOSP')).exists()) and contained.ofType(Location).where(type.coding.where(system='http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code='HU').exists()).exists() and contained.ofType(Location).where(type.coding.where(system='http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code='HOSP').exists()).exists()))"
           },
           {
-            "key": "serviceCategory-7-location-exactly-one-of-ptres-of",
-            "human": "When serviceCategory is 7 and virtualService is not present, contained Location must include either PTRES or OF, but not both.",
+            "key": "serviceCategory-7-location-requires-ptres-or-of",
+            "human": "When serviceCategory is 7, the appointment is not partOf another appointment, and virtualService is not present, contained Location must include PTRES or OF.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or (contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'PTRES').exists()).exists() != contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'OF').exists()).exists())"
+            "expression": "serviceCategory.coding.where(code = '7').empty() or partOf.exists() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code = 'PTRES' or code = 'OF')).exists()).exists()"
+          },
+          {
+            "key": "serviceCategory-7-location-not-both-ptres-and-of",
+            "human": "When serviceCategory is 7, the appointment is not partOf another appointment, and virtualService is not present, contained Location must not include both PTRES and OF.",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "serviceCategory.coding.where(code = '7').empty() or partOf.exists() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or (contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'PTRES').exists()).exists() and contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'OF').exists()).exists()).not()"
           },
           {
             "key": "serviceCategory-7-contained-flag-rules",
