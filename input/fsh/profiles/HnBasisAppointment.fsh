@@ -81,10 +81,19 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * supportingInformation ^slicing.discriminator.path = "resolve()"
 * supportingInformation ^slicing.rules = #open
 * supportingInformation ^min = 0
-* supportingInformation contains kommunikasjonspart 0..1
+* supportingInformation contains
+    kommunikasjonspart 0..1 and
+    documentReference 0..* and
+    flag 0..*
 * supportingInformation[kommunikasjonspart] only Reference(KommunikasjonspartOrganization)
 * supportingInformation[kommunikasjonspart] ^short = "Kommunikasjonspart"
 * supportingInformation[kommunikasjonspart] ^definition = "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7."
+* supportingInformation[documentReference] only Reference(NoBasisDocumentReference)
+* supportingInformation[documentReference] ^short = "Document reference"
+* supportingInformation[documentReference] ^definition = "DocumentReference resource with supporting documentation for the appointment."
+* supportingInformation[flag] only Reference(HnBasisFlag)
+* supportingInformation[flag] ^short = "Flag"
+* supportingInformation[flag] ^definition = "Flag resource with supporting flag information for the appointment."
 * slot ..0
 * comment ..0
 * patientInstruction obeys must-be-max-1000-chars
