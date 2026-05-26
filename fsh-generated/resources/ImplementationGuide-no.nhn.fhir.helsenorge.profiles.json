@@ -440,22 +440,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/helsenorge-patient"
-        },
-        "name": "Helsenorge Patient",
-        "description": "Example Helsenorge patient profile for demonstrating the project structure.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Patient/helsenorge-patient-example"
-        },
-        "name": "Helsenorge Patient Example",
-        "description": "Example Patient instance conforming to the Helsenorge Patient profile.",
-        "exampleCanonical": "https://fhir.nhn.no/ig/helsenorge/profiles/StructureDefinition/helsenorge-patient"
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/hn-paminnelse"
         },
         "name": "Helsenorge påminnelse metatag code system",
