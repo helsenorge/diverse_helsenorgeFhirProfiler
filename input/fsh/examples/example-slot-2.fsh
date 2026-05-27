@@ -13,4 +13,4 @@ Usage: #example
 * schedule = Reference(Schedule/987e4567-e89b-12d3-a456-426614174010)
 * status = #free
 * start = "2026-06-01T09:00:00+02:00"
-* end = "2026-06-01T09:30:00+02:00"
+* end = "2026-07-01T09:30:00+02:00"
