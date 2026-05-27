@@ -111,11 +111,18 @@
             "expression": "serviceCategory.coding.where(code = '7').empty() or meta.tag.where(system = 'http://helsenorge.no/fhir/varsling' or system = 'http://helsenorge.no/fhir/paminnelse').empty()"
           },
           {
-            "key": "hn-app-kommunikasjonspart-or-herid",
-            "human": "When serviceCategory is 7, Appointment SHALL reference exactly the HER-id level 2 organization via participant.actor, and that organization SHALL have partOf referencing a HER-id level 1 organization. Appointment SHALL NOT carry HER organizations in supportingInformation. Otherwise, Appointment SHALL reference at least one KommunikasjonspartOrganization with HER-id level 2 in supportingInformation.",
+            "key": "supportinginformation-organization-partof",
+            "human": "When supportingInformation references an Organization, the referenced Organization must use HER-id level 2 identifier system and must have partOf referencing an Organization that uses HER-id level 1 identifier system.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "((serviceCategory.coding.where(code = '7').exists()) implies (participant.actor.resolve().ofType(Organization).where(meta.profile = 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization' and identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.2' and value.exists()).exists()).exists() and participant.actor.resolve().ofType(Organization).where(meta.profile = 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization').all(partOf.exists() and partOf.resolve().ofType(Organization).where(meta.profile = 'http://hl7.no/fhir/StructureDefinition/no-basis-Organization').exists()) and supportingInformation.resolve().ofType(Organization).where(meta.profile = 'http://hl7.no/fhir/StructureDefinition/no-basis-Organization' or meta.profile = 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization').empty())) and ((serviceCategory.coding.where(code = '7').empty()) implies (supportingInformation.resolve().ofType(Organization).where(meta.profile = 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization' and identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.2' and value.exists()).exists()).exists()))"
+            "expression": "supportingInformation.resolve().ofType(Organization).all(identifier.exists() and identifier.all(system = 'urn:oid:2.16.578.1.12.4.1.4.102') and partOf.exists() and partOf.resolve().ofType(Organization).exists() and partOf.resolve().ofType(Organization).all(identifier.exists() and identifier.all(system = 'urn:oid:2.16.578.1.12.4.1.4.101')))"
+          },
+          {
+            "key": "serviceCategory-7-requires-kommunikasjonspart-organization",
+            "human": "When serviceCategory is 7, supportingInformation[kommunikasjonspart] must reference an Organization.",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "serviceCategory.coding.where(code = '7').empty() or supportingInformation.resolve().ofType(Organization).exists()"
           },
           {
             "key": "virtualservice-or-location-required",
@@ -535,7 +542,8 @@
             }
           ],
           "rules": "open"
-        }
+        },
+        "min": 1
       },
       {
         "id": "Appointment.supportingInformation:kommunikasjonspart",
@@ -543,13 +551,14 @@
         "sliceName": "kommunikasjonspart",
         "short": "Kommunikasjonspart",
         "definition": "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization"
+              "http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
         ]

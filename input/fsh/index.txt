@@ -89,7 +89,7 @@ appointment-participant-actor-patient-reference-identifier  Invariant   invarian
 appointment-participant-actor-patient-reference-reference   Invariant   invariants\appointment-participant-actor-patient-reference-reference.fsh
 cancelationReason-inv                                       Invariant   invariants\cancelationReason-inv.fsh
 contained-location-must-have-managingorganization           Invariant   invariants\contained-location-must-have-managingorganization.fsh
-hn-app-kommunikasjonspart-or-herid                          Invariant   invariants\hn-app-kommunikasjonspart-or-herid.fsh
+serviceCategory-7-requires-kommunikasjonspart-organization  Invariant   invariants\serviceCategory-7-requires-kommunikasjonspart-organization.fsh
 hn-app-primary-2                                            Invariant   invariants\hn-app-primary-2.fsh
 hn-app-primary-3                                            Invariant   invariants\hn-app-primary-3.fsh
 hn-app-primary-4                                            Invariant   invariants\hn-app-primary-4.fsh

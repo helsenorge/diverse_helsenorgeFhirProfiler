@@ -438,6 +438,13 @@
       },
       {
         "reference": {
+          "reference": "Slot/123e4567-e89b-12d3-a456-426614174011"
+        },
+        "name": "example-slot-3",
+        "exampleCanonical": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-slot"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/hn-appointment-status-vs"
         },
         "name": "Helsenorge Appointment Status Value Set",
