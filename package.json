@@ -8,6 +8,7 @@
     "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-sushi.ps1",
     "watch": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/watch-sushi.ps1",
     "validate": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-firely.ps1",
+    "validate:examples": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-examples-firely.ps1",
     "ci": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ci.ps1"
   },
   "devDependencies": {

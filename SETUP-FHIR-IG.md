@@ -180,8 +180,8 @@ Put Node tooling dependencies in `package.json`:
 The FHIR package version is controlled in `sushi-config.yaml`:
 
 ```yaml
-version: 2.4.6-beta
-releaseLabel: 2.4.6-beta
+version: 2.5.1-beta
+releaseLabel: 2.5.1-beta
 ```
 
 When preparing a new Simplifier package, create a release branch and update the version before generating JSON:
@@ -189,7 +189,7 @@ When preparing a new Simplifier package, create a release branch and update the 
 ```powershell
 git checkout main
 git pull origin main
-git checkout -b release/2.4.6-beta
+git checkout -b release/2.5.1-beta
 ```
 
 Then update:
@@ -204,20 +204,21 @@ Run:
 ```powershell
 .\scripts\build-sushi.ps1
 .\scripts\validate-firely.ps1
+.\scripts\validate-examples-firely.ps1
 ```
 
 Commit and push:
 
 ```powershell
 git add sushi-config.yaml package-list.json fsh-generated/resources
-git commit -m "Prepare 2.4.6-beta package"
-git push -u origin release/2.4.6-beta
+git commit -m "Prepare 2.5.1-beta package"
+git push -u origin release/2.5.1-beta
 ```
 
 Open a Pull Request:
 
 ```text
-release/2.4.6-beta -> main
+release/2.5.1-beta -> main
 ```
 
 After review and successful validation, merge to `main` and let Simplifier import/publish from `main`.
@@ -240,6 +241,18 @@ Validate generated JSON with Firely Terminal:
 
 ```powershell
 .\scripts\validate-firely.ps1
+```
+
+Validate only generated example resources with Firely Terminal:
+
+```powershell
+.\scripts\validate-examples-firely.ps1
+```
+
+or:
+
+```powershell
+npm run validate:examples
 ```
 
 Run local CI checks:
@@ -273,7 +286,13 @@ npm run watch
 .\scripts\validate-firely.ps1
 ```
 
-6. Commit both source and generated JSON.
+6. When editing examples, run example-only validation:
+
+```powershell
+npm run validate:examples
+```
+
+7. Commit both source and generated JSON.
 
 ## Initial GitHub Push
 

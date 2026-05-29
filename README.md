@@ -87,6 +87,18 @@ Validate generated JSON with Firely Terminal:
 .\scripts\validate-firely.ps1
 ```
 
+Validate only generated example resources with Firely Terminal:
+
+```powershell
+.\scripts\validate-examples-firely.ps1
+```
+
+or:
+
+```powershell
+npm run validate:examples
+```
+
 Run the local CI sequence:
 
 ```powershell
@@ -110,8 +122,8 @@ IG website generation is not part of the required PR validation. Use the manual 
 The package version is controlled in `sushi-config.yaml`:
 
 ```yaml
-version: 2.4.6-beta
-releaseLabel: 2.4.6-beta
+version: 2.5.1-beta
+releaseLabel: 2.5.1-beta
 ```
 
 Update this when preparing a new Simplifier package version. The matching package publication metadata is in `package-list.json`.
@@ -119,7 +131,7 @@ Update this when preparing a new Simplifier package version. The matching packag
 Recommended release branch naming:
 
 ```text
-release/2.4.6-beta
+release/2.5.1-beta
 ```
 
 ## Simplifier Setup
