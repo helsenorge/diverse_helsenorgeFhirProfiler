@@ -41,7 +41,7 @@
     ]
   },
   "schedule": {
-    "reference": "Schedule/example-schedule-uuid"
+    "reference": "Schedule/example-schedule-1"
   },
   "status": "free",
   "start": "2026-06-01T09:00:00+02:00",

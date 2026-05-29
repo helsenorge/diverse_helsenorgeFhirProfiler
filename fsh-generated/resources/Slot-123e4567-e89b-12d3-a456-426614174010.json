@@ -9,7 +9,7 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:uuid:999e4567-e89b-12d3-a456-426614174010"
+      "value": "urn:uuid:123e4567-e89b-12d3-a456-426614174010"
     }
   ],
   "serviceCategory": [
@@ -41,9 +41,9 @@
     ]
   },
   "schedule": {
-    "reference": "Schedule/987e4567-e89b-12d3-a456-426614174010"
+    "reference": "Schedule/example-schedule-2"
   },
   "status": "free",
-  "start": "2026-06-01T09:00:00+02:00",
-  "end": "2026-07-01T09:30:00+02:00"
+  "start": "2026-06-01T10:00:00+02:00",
+  "end": "2026-06-01T10:20:00+02:00"
 }

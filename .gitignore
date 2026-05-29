@@ -4,6 +4,7 @@ input-cache/
 .fhir/
 .firely/
 .firely-validation/
+.firely-example-validation/
 
 # IG Publisher output
 output/
