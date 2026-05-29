@@ -50,6 +50,10 @@ Description: "Use case specific profile for Norwegian services defined in the No
     organisatoriskBetegnelse 0..1
 * type[organisatoriskNiva] ..1
 * type[organisatoriskNiva] from urn:oid:2.16.578.1.12.4.1.1.8628 (required)
+* type[organisatoriskNiva].coding.system 1..
+* type[organisatoriskNiva].coding.system = "urn:oid:2.16.578.1.12.4.1.1.8628" (exactly)
 * type[organisatoriskBetegnelse] ..1
 * type[organisatoriskBetegnelse] from urn:oid:2.16.578.1.12.4.1.1.8624 (required)
+* type[organisatoriskBetegnelse].coding.system 1..
+* type[organisatoriskBetegnelse].coding.system = "urn:oid:2.16.578.1.12.4.1.1.8624" (exactly)
 * partOf 1..

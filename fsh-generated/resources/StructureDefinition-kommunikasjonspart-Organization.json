@@ -177,6 +177,12 @@
         }
       },
       {
+        "id": "Organization.type:organisatoriskNiva.coding.system",
+        "path": "Organization.type.coding.system",
+        "min": 1,
+        "fixedUri": "urn:oid:2.16.578.1.12.4.1.1.8628"
+      },
+      {
         "id": "Organization.type:organisatoriskBetegnelse",
         "path": "Organization.type",
         "sliceName": "organisatoriskBetegnelse",
@@ -186,6 +192,12 @@
           "strength": "required",
           "valueSet": "urn:oid:2.16.578.1.12.4.1.1.8624"
         }
+      },
+      {
+        "id": "Organization.type:organisatoriskBetegnelse.coding.system",
+        "path": "Organization.type.coding.system",
+        "min": 1,
+        "fixedUri": "urn:oid:2.16.578.1.12.4.1.1.8624"
       },
       {
         "id": "Organization.partOf",

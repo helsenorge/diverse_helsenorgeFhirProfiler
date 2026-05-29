@@ -112,10 +112,10 @@
           },
           {
             "key": "supportinginformation-organization-partof",
-            "human": "Every Organization referenced from supportingInformation must have only HER-id level 2 identifiers and must have partOf referencing only Organizations with HER-id level 1 identifiers.",
+            "human": "Every non-kommunikasjonspart Organization referenced from supportingInformation must have a HER-id level 2 identifier and must have partOf referencing an Organization with a HER-id level 1 identifier.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "supportingInformation.resolve().ofType(Organization).all(identifier.exists() and identifier.all(system = 'urn:oid:2.16.578.1.12.4.1.4.102') and partOf.exists() and partOf.resolve().ofType(Organization).exists() and partOf.resolve().ofType(Organization).all(identifier.exists() and identifier.all(system = 'urn:oid:2.16.578.1.12.4.1.4.101')))"
+            "expression": "supportingInformation.resolve().ofType(Organization).where(meta.profile != 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization').all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.102').exists() and partOf.exists() and partOf.resolve().ofType(Organization).exists() and partOf.resolve().ofType(Organization).all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.101').exists()))"
           },
           {
             "key": "serviceCategory-7-requires-kommunikasjonspart-organization",
@@ -557,7 +557,6 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
