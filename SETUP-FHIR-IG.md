@@ -292,7 +292,14 @@ git remote -v
 If no remote is configured, add the GitHub repository URL:
 
 ```powershell
-git remote add origin https://github.com/<owner>/<repo-name>.git
+git remote add origin https://github.com/helsenorge/diverse_helsenorgeFhirProfiler.git
+```
+
+If the clone already points to an old repository location, update `origin`:
+
+```powershell
+git remote set-url origin https://github.com/helsenorge/diverse_helsenorgeFhirProfiler.git
+git remote -v
 ```
 
 Stage and commit:
