@@ -13,6 +13,10 @@
       "display": "Innbygger kan kansellere timen"
     },
     {
+      "code": "cancelWithComment",
+      "display": "Innbygger kan kansellere timen"
+    },
+    {
       "code": "canChangeAppointmentDialog",
       "display": "Innbygger kan be om endret time (Dialogmeldinger)"
     },
@@ -45,7 +49,7 @@
       "display": "Dialog kan inisieres"
     }
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "experimental": false,
   "date": "2025-12-02T14:53:52+01:00",
   "publisher": "Example Publisher",
@@ -61,5 +65,5 @@
     }
   ],
   "caseSensitive": true,
-  "count": 9
+  "count": 10
 }
