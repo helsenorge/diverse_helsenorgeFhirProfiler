@@ -14,6 +14,7 @@ Description: "Code system used for Flag codes in nytimeløsing"
 * ^content = #complete
 * ^count = 9
 * #cancel "Innbygger kan kansellere timen"
+* #cancelWithComment "Innbygger kan kansellere timen"
 * #canChangeAppointmentDialog "Innbygger kan be om endret time (Dialogmeldinger)"
 * #canUseShortNotice "Innbygger kan komme på kort varsel"
 * #canCancelServiceRequest "Innbygger kan be om at behandlingsløp avsluttes"

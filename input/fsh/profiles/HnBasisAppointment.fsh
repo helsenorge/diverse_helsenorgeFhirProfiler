@@ -77,7 +77,7 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * reasonReference ..0
 * priority ..0
 * description obeys must-be-max-1000-chars
-* supportingInformation ^slicing.discriminator.type = #profile
+* supportingInformation ^slicing.discriminator.type = #type
 * supportingInformation ^slicing.discriminator.path = "resolve()"
 * supportingInformation ^slicing.rules = #open
 * supportingInformation ^min = 0
