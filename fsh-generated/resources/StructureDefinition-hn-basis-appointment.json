@@ -91,7 +91,7 @@
           },
           {
             "key": "serviceCategory-7-contained-flag-rules",
-            "human": "When serviceCategory is 7, contained Flag resources must not use the codes canAcknowledge, canChangeAppointmentDialog, canHaveAppointmentDetails or canInitiateDialog or cancel or cancelWithComment.",
+            "human": "When serviceCategory is 7, contained Flag resources must not use the codes canAcknowledge, canChangeAppointmentDialog, canHaveAppointmentDetails, canInitiateDialog, cancel, or cancelWithComment.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
             "expression": "serviceCategory.coding.where(code = '7').empty() or contained.ofType(Flag).all(code.coding.where(code in ('canAcknowledge' | 'canChangeAppointmentDialog' | 'canHaveAppointmentDetails' | 'canInitiateDialog' | 'cancel' | 'cancelWithComment')).empty())"
