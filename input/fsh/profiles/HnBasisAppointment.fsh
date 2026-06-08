@@ -3,7 +3,7 @@ Parent: NoBasisAppointment
 Id: hn-basis-appointment
 Title: "hn-basis-appointment"
 Description: "Base profile for Helsenorge Appointment information. Defined by Helsenorge based on national profile."
-* ^version = "2.5.3"
+* ^version = "2.5.4"
 * ^status = #draft
 * obeys cancelationReason-inv and contained-location-must-have-managingorganization and hn-app-primary-2 and hn-app-primary-3 and hn-app-reqperiod-1 and hn-app-primary-4 and hn-app-primary-5 and serviceCategory-location-type and serviceCategory-7-location-requires-ptres-or-of and serviceCategory-7-location-not-both-ptres-and-of and serviceCategory-7-contained-flag-rules and contained-flag-allowed-codes and serviceCategory-7-no-varsling-or-paminnelse and supportinginformation-organization-partof and serviceCategory-7-requires-kommunikasjonspart-organization and virtualservice-or-location-required and hn-app-proposed-only-servicecategory-7
 * meta ^short = "Metadata used for Appointment in Helsenorge"
@@ -77,7 +77,7 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * reasonReference ..0
 * priority ..0
 * description obeys must-be-max-1000-chars
-* supportingInformation ^slicing.discriminator.type = #profile
+* supportingInformation ^slicing.discriminator.type = #type
 * supportingInformation ^slicing.discriminator.path = "resolve()"
 * supportingInformation ^slicing.rules = #open
 * supportingInformation ^min = 0
