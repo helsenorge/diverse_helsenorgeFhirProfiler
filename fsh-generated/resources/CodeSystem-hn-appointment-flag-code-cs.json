@@ -14,7 +14,7 @@
     },
     {
       "code": "cancelWithComment",
-      "display": "Innbygger kan kansellere timen"
+      "display": "Innbygger kan kansellere timen, med kommentar"
     },
     {
       "code": "canChangeAppointmentDialog",
