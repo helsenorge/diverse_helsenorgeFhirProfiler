@@ -26,6 +26,10 @@ Thumbs.db
 .vs/
 .vscode/*.log
 
+# .NET build artifacts
+bin/
+obj/
+
 # Keep generated FHIR JSON committed for Simplifier import.
 !fsh-generated/
 !fsh-generated/resources/
