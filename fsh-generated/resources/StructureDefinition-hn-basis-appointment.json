@@ -41,18 +41,25 @@
             "expression": "serviceCategory.coding.where(code = '7').empty() or basedOn.empty()"
           },
           {
-            "key": "hn-app-primary-3",
-            "human": "start is required unless status is proposed",
+            "key": "start-required-inv",
+            "human": "start is required unless the appointment uses requestedPeriod and status is proposed, cancelled, or entered-in-error.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "status = 'proposed' or start.exists()"
+            "expression": "start.exists() or (requestedPeriod.exists() and (status = 'proposed' or status = 'cancelled' or status = 'entered-in-error'))"
           },
           {
             "key": "hn-app-reqperiod-1",
-            "human": "If status is proposed, requestedPeriod must exist and each requestedPeriod must have both start and end",
+            "human": "If status is proposed, requestedPeriod must exist. If requestedPeriod is present, each requestedPeriod must have both start and end.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "status != 'proposed' or (requestedPeriod.exists() and requestedPeriod.all(start.exists() and end.exists()))"
+            "expression": "(status != 'proposed' or requestedPeriod.exists()) and (requestedPeriod.empty() or requestedPeriod.all(start.exists() and end.exists()))"
+          },
+          {
+            "key": "hn-app-reqperiod-2",
+            "human": "If requestedPeriod is present, status must be proposed, cancelled, or entered-in-error.",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "requestedPeriod.empty() or (status = 'proposed' or status = 'cancelled' or status = 'entered-in-error')"
           },
           {
             "key": "hn-app-primary-4",
