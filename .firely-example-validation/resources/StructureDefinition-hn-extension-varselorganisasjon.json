@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-extension-varselorganisasjon",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-extension-varselorganisasjon",
+  "version": "1.3.2",
+  "name": "HnExtensionVarselorganisasjon",
+  "title": "Varselorganisasjon",
+  "status": "draft",
+  "date": "2025-10-20T21:59:35+00:00",
+  "description": "Varselorganisasjon som kjem frem i varsel til innbygger.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Varselorganisasjon",
+        "definition": "Varselorganisasjon som kjem frem i varsel til innbygger."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/hn-extension-varselorganisasjon"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

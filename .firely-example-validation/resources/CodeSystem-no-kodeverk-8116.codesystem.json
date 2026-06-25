@@ -1,0 +1,97 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk8116",
+  "id": "no-kodeverk-8116.codesystem",
+  "title": "8116 ID-type for personer",
+  "description": "Angir type identifikator for personer.",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8116.codesystem",
+  "concept": [
+    {
+      "code": "FNR",
+      "display": "Fødselsnummer",
+      "definition": "Norsk fødselsnummer"
+    },
+    {
+      "code": "DNR",
+      "display": "D-nummer",
+      "definition": "Nummer som kan tildeles personer uten norsk fødselsnummer"
+    },
+    {
+      "code": "HNR",
+      "display": "H-nummer",
+      "definition": "Virksomhetsinternt hjelpenummer"
+    },
+    {
+      "code": "HPR",
+      "display": "HPR-nummer",
+      "definition": "Id Helsepersonellregisteret"
+    },
+    {
+      "code": "HER",
+      "display": "HER-id",
+      "definition": "Identifikator som unikt identifiserer en  kommunikasjonspart i Adresseregisteret."
+    },
+    {
+      "code": "PNR",
+      "display": "Passnummer"
+    },
+    {
+      "code": "SEF",
+      "display": "Svensk personnummer"
+    },
+    {
+      "code": "DKF",
+      "display": "Dansk personnummer"
+    },
+    {
+      "code": "SSN",
+      "display": "Sosial security number"
+    },
+    {
+      "code": "FPN",
+      "display": "Forsikringspolise nummer"
+    },
+    {
+      "code": "UID",
+      "display": "Utenlandsk identifikasjon",
+      "definition": "Annet enn svensk- og dansk personnummer"
+    },
+    {
+      "code": "DUF",
+      "display": "DUF-nummer",
+      "definition": "Registreringsnummeret i Utlendingsdirektoratets datasystem"
+    },
+    {
+      "code": "FHN",
+      "display": "Felles hjelpenummer"
+    },
+    {
+      "code": "XXX",
+      "display": "Annet"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.8116"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 14
+}

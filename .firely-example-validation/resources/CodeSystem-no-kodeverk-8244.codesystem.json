@@ -1,0 +1,46 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk8244",
+  "id": "no-kodeverk-8244.codesystem",
+  "title": "8244 Avviksmarkør i svarrapportering av medisinske tjenester",
+  "description": "Angir svarverdi i forhold til referansegrense",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8244.codesystem",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Over øvre referansegrense"
+    },
+    {
+      "code": "2",
+      "display": "Under nedre referansegrense"
+    },
+    {
+      "code": "3",
+      "display": "Utenfor referansegrensene"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.8244"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 3
+}

@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vurdertDato",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/no-vurdert-dato",
+  "version": "1.3.2",
+  "name": "NoVurdertDato",
+  "title": "Vurdert dato",
+  "status": "draft",
+  "date": "2025-10-20T21:59:35+00:00",
+  "description": "Brukes når forespørsel er vurdert og/eller henvisning er avvist/avsluttet.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Vurdert dato",
+        "definition": "Brukes når forespørsel er vurdert og/eller henvisning er avvist/avsluttet."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/no-vurdert-dato"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Vurdert dato.",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

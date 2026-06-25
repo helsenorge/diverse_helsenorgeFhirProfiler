@@ -1,0 +1,23 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "HnPaminnelseCS",
+  "id": "hn-paminnelse",
+  "title": "Helsenorge påminnelse metatag code system",
+  "description": "Codes for controlling reminder behaviour in Helsenorge meta.tag.",
+  "url": "http://helsenorge.no/fhir/paminnelse",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Innbygger skal ikke påminnes"
+    },
+    {
+      "code": "9",
+      "display": "Innbygger skal påminnes på standard måte"
+    }
+  ],
+  "version": "1.0.0",
+  "caseSensitive": true,
+  "count": 2
+}

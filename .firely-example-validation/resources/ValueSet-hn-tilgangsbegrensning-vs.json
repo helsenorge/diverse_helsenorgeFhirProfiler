@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HnBetingetTilgangsbegrensningVS",
+  "id": "hn-tilgangsbegrensning-vs",
+  "title": "Helsenorge tilgangsbegrensning ValueSet",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-tilgangsbegrensning-vs",
+  "version": "1.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.9603",
+        "concept": [
+          {
+            "code": "N",
+            "display": "N"
+          },
+          {
+            "code": "NORN_FORANS",
+            "display": "NORN_FORANS"
+          },
+          {
+            "code": "NORN_UNGDOM",
+            "display": "NORN_UNGDOM"
+          }
+        ]
+      }
+    ]
+  }
+}

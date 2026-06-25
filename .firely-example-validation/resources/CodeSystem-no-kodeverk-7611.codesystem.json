@@ -1,0 +1,54 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk7611",
+  "id": "no-kodeverk-7611.codesystem",
+  "title": "7611 Representasjonsrolle.",
+  "description": "Dersom en innbygger benytter dialogtjenester på vegne av pasient fra helsenorge.no så skal informasjon om hvem som benytter tjeneste oppgis vha. objektet Pasientrelasjon. Pasienten oppgis som vanlig under patient-tagen i Hodemeldingen, mens personen som benytter en dialogtjeneste på vegne av pasienten skal oppgis i objektet Pasientrelasjon. Relasjon angir her representasjonsolle person som benytter tjeneste har til pasient.",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-7611.codesystem",
+  "concept": [
+    {
+      "code": "FO",
+      "display": "Foreldreansvar",
+      "definition": "Registrert med foreldreansvar (i FREG). I tillegg må en av foreldrene være registrert med samme bostedsadresse som barnet."
+    },
+    {
+      "code": "VE",
+      "display": "Vergemål",
+      "definition": "Person som representerer Innbygger basert på  vergemålsvedtak"
+    },
+    {
+      "code": "FU",
+      "display": "Fullmakt",
+      "definition": "Fullmektig basert på fullmakt fra innbygger med full samtykkekompetanse. Hvem som helst kan bli opprettet som fullmektig, relasjon mellom fullmaktsgiver og fullmektig er ikke ytterligere spesifisert."
+    },
+    {
+      "code": "TD",
+      "display": "Tildelt fullmakt",
+      "definition": "Innbyggers nærmeste pårørende kan, etter bekreftelse fra fastlegen, registreres som fullmektig for innbygger som mangler helserettslig samtykkekompetanse."
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.7611"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2023-03-29",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 4
+}

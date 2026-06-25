@@ -1,0 +1,74 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-basis-consultationType",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-consultationType",
+  "version": "1.0.1",
+  "name": "HnBasisConsultationType",
+  "title": "hn-basis-consultationType",
+  "status": "draft",
+  "date": "2025-12-02T13:53:52+00:00",
+  "description": "Type of consultation.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Appointment",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "hn-basis-consultationType",
+        "definition": "Type of consultation.",
+        "max": "1",
+        "mustSupport": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-consultationType"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "The code is preferred used from Volven 9505. Using other code or valuesets has to be agreed with Helsenorge",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "urn:oid:2.16.578.1.12.4.1.1.9505"
+        }
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x].code",
+        "path": "Extension.value[x].code",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x].display",
+        "path": "Extension.value[x].display",
+        "min": 1
+      }
+    ]
+  }
+}

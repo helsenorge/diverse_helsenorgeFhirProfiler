@@ -1,0 +1,66 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk8239",
+  "id": "no-kodeverk-8239.codesystem",
+  "title": "8239 Forholdsoperatorer i svarrapportering av medisinske tjenester",
+  "description": "Forholdsoperatorer i svarrapportering av medisinske tjeneste",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8239.codesystem",
+  "concept": [
+    {
+      "code": "EQ",
+      "display": "Lik"
+    },
+    {
+      "code": "GE",
+      "display": "Større eller lik"
+    },
+    {
+      "code": "GT",
+      "display": "Større enn"
+    },
+    {
+      "code": "LE",
+      "display": "Mindre eller lik"
+    },
+    {
+      "code": "LT",
+      "display": "Mindre enn"
+    },
+    {
+      "code": "MG",
+      "display": "Mye større enn"
+    },
+    {
+      "code": "ML",
+      "display": "Mye mindre enn"
+    },
+    {
+      "code": "NE",
+      "display": "Ikke lik"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.8239"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 8
+}

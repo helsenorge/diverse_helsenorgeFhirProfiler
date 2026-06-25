@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ServiceRequestPerformerTypeVS",
+  "id": "serviceRequest-performerType-vs",
+  "title": "ServiceRequest PerformerType Value Set",
+  "description": "Koder for valgte profesjonstyper.",
+  "url": "http://helsenorge.no/fhir/ValueSet/serviceRequest-performerType-vs",
+  "version": "1.3.2",
+  "experimental": true,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "158965000"
+          }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.9060"
+      }
+    ]
+  }
+}

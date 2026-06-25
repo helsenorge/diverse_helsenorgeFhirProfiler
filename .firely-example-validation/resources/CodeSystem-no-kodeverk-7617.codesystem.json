@@ -1,0 +1,70 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk7617",
+  "id": "no-kodeverk-7617.codesystem",
+  "title": "7617 Timetype innbyggerportal",
+  "description": "Tilleggsopplysning til diagnose.",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-7617.codesystem",
+  "concept": [
+    {
+      "code": "Ordinær",
+      "display": "Ordinær time"
+    },
+    {
+      "code": "Hastetime",
+      "display": "Hastetime"
+    },
+    {
+      "code": "Video",
+      "display": "Videotime"
+    },
+    {
+      "code": "Tidsvindu",
+      "display": "Tidsvindu"
+    },
+    {
+      "code": "Gruppe",
+      "display": "Gruppetime"
+    },
+    {
+      "code": "Vaksine",
+      "display": "Time for vaksine"
+    },
+    {
+      "code": "Lab",
+      "display": "Time på lab"
+    },
+    {
+      "code": "Koronatest",
+      "display": "Innført for håndtering av pandemien"
+    },
+    {
+      "code": "Koronavaksine",
+      "display": "Innført for håndtering av pandemien"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.7617"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2023-03-29",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 9
+}

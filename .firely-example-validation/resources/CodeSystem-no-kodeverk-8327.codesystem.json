@@ -1,0 +1,50 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk8327",
+  "id": "no-kodeverk-8327.codesystem",
+  "title": "8327 Offisiell personidentifikasjon",
+  "description": "Angir type identifikator for person",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8327.codesystem",
+  "concept": [
+    {
+      "code": "DNR",
+      "display": "D-nummer"
+    },
+    {
+      "code": "FHN",
+      "display": "Felles hjelpenummer (FH-nummer)"
+    },
+    {
+      "code": "FNR",
+      "display": "Fødselsnummer"
+    },
+    {
+      "code": "HNR",
+      "display": "Virksomhetsinternt hjelpenummer"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.8327"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 4
+}

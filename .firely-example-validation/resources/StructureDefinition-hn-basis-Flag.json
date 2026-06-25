@@ -1,0 +1,67 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-basis-Flag",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-Flag",
+  "version": "1.0.1",
+  "name": "HnBasisFlag",
+  "title": "hn-basis-flag",
+  "status": "draft",
+  "description": "Basisprofil for Flag used in 'ny timeløsning.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Flag",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Flag",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Flag.status.extension",
+        "path": "Flag.status.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Flag.category.coding",
+        "path": "Flag.category.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-Flag",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Flag.code",
+        "path": "Flag.code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-flag-code-vs"
+        }
+      },
+      {
+        "id": "Flag.code.coding",
+        "path": "Flag.code.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-Flag",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      }
+    ]
+  }
+}

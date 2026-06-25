@@ -1,0 +1,43 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "no-basis-apotekenes-konsesjonsnr",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+      "valueUri": "http://helsenorge.no/fhir/NamingSystem/no-basis-apotekenes-konsesjonsnr"
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+      "valueString": "1.3.2"
+    }
+  ],
+  "name": "ApotekenesKonsesjonsnr",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2022-02-10",
+  "responsible": "Statens legemiddelverk",
+  "description": "Ved utstedelse av apotekkonsesjon for et nytt apotek tildeles et apotekkonsesjonsnummer. Konsesjonsnummeret er et firesifret nummer, i en nummerserie som starter på 1001, som er unikt for hvert apotek. Tildeles av Statens legemiddelverk.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://hl7.no/fhir/NamingSystem/AKO",
+      "preferred": false
+    },
+    {
+      "type": "oid",
+      "value": "2.16.578.1.12.4.1.4.107",
+      "preferred": true
+    }
+  ]
+}

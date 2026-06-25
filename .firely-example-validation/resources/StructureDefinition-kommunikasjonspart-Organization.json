@@ -1,0 +1,209 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "kommunikasjonspart-Organization",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization",
+  "version": "1.0.1",
+  "name": "KommunikasjonspartOrganization",
+  "title": "kommunikasjonspart-Organization",
+  "status": "draft",
+  "date": "2019-05-15",
+  "description": "Use case specific profile for Norwegian services defined in the Norwegian address register, kommunikasjonspart-Organization. Defined by The Norwegian Directorate of eHealth and HL7 Norway. The profile adds Norwegian specific identification of Healthcare services as defined in the Norwegian adress register. The use-case profile is specific for the use case of identifying relevant services defined in the address register for electronic communication.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization",
+        "path": "Organization",
+        "definition": "The details of a kommunikasjonspart (communication party) defined in the Norwegian Address Registry for Health care. \r\n\r\nOther kinds of healthcare services not registered in Adresseregisteret (clinical services) shold not use this profile. The standard HL7 Resource or the no-basis-HealthcareService can be used.",
+        "comment": "Definition of \"kommunikasjonspart\" from the Standard HIS 1153-1:2016 (Norwegian text only):\r\nLogisk avgrenset del av en virksomhet i helse- og omsorgstjenesten, som sender og/eller mottar elektroniske meldinger.\r\nMerk 1: En kommunikasjonspart har alltid en HER-id.\r\nMerk 2: En kommunikasjonspart vil som hovedregel være knyttet til en tjenestetype.",
+        "alias": [
+          "kommunikasjonspart"
+        ]
+      },
+      {
+        "id": "Organization.extension",
+        "path": "Organization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Organization.extension:organizationcoverage",
+        "path": "Organization.extension",
+        "sliceName": "organizationcoverage",
+        "alias": [
+          "dekningsområde",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://helsenorge.no/fhir/StructureDefinition/tba-organizationcoverage"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Organization.identifier.system",
+        "path": "Organization.identifier.system",
+        "short": "The official name of the RESH id namespace"
+      },
+      {
+        "id": "Organization.identifier:ENH",
+        "path": "Organization.identifier",
+        "sliceName": "ENH",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.identifier:ENH.system",
+        "path": "Organization.identifier.system",
+        "min": 1,
+        "fixedUri": "urn:oid:2.16.578.1.12.4.1.4.101"
+      },
+      {
+        "id": "Organization.identifier:ENH.value",
+        "path": "Organization.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Organization.identifier:RSH",
+        "path": "Organization.identifier",
+        "sliceName": "RSH",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Organization.identifier:RSH.system",
+        "path": "Organization.identifier.system",
+        "min": 1,
+        "fixedUri": "urn:oid:2.16.578.1.12.4.1.4.102"
+      },
+      {
+        "id": "Organization.identifier:RSH.value",
+        "path": "Organization.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Organization.identifier:HER",
+        "path": "Organization.identifier",
+        "sliceName": "HER",
+        "definition": "HER id for this tba-Organization, should be identified according to the predefined HERid naming system.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Organization.identifier:HER.system",
+        "path": "Organization.identifier.system",
+        "short": "The official name of the HERid namespace",
+        "min": 1,
+        "fixedUri": "urn:oid:2.16.578.1.12.4.1.2"
+      },
+      {
+        "id": "Organization.identifier:HER.value",
+        "path": "Organization.identifier.value",
+        "short": "The actual HER-id from the Norwegian Adresseregister",
+        "definition": "The actual HER-id from the Norwegian Adresseregister",
+        "min": 1
+      },
+      {
+        "id": "Organization.type",
+        "path": "Organization.type",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "alias": [
+          "tjenestetype"
+        ],
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/organization-type",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "OrganizationType"
+            }
+          ],
+          "description": "Tjenestetype CodeSystems"
+        }
+      },
+      {
+        "id": "Organization.type:organisatoriskNiva",
+        "path": "Organization.type",
+        "sliceName": "organisatoriskNiva",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "urn:oid:2.16.578.1.12.4.1.1.8628"
+        }
+      },
+      {
+        "id": "Organization.type:organisatoriskNiva.coding.system",
+        "path": "Organization.type.coding.system",
+        "min": 1,
+        "fixedUri": "urn:oid:2.16.578.1.12.4.1.1.8628"
+      },
+      {
+        "id": "Organization.type:organisatoriskBetegnelse",
+        "path": "Organization.type",
+        "sliceName": "organisatoriskBetegnelse",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "urn:oid:2.16.578.1.12.4.1.1.8624"
+        }
+      },
+      {
+        "id": "Organization.type:organisatoriskBetegnelse.coding.system",
+        "path": "Organization.type.coding.system",
+        "min": 1,
+        "fixedUri": "urn:oid:2.16.578.1.12.4.1.1.8624"
+      },
+      {
+        "id": "Organization.partOf",
+        "path": "Organization.partOf",
+        "min": 1
+      }
+    ]
+  }
+}

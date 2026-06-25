@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HnScheduleAndSlotTypeVS",
+  "id": "hn-scheduleandslot-type-vs",
+  "title": "hn-scheduleandslot-type-vs",
+  "description": "Value set for schedule and slot type",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-scheduleandslot-type-vs",
+  "version": "1.3.2",
+  "experimental": true,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.7617",
+        "concept": [
+          {
+            "code": "Vaksine",
+            "display": "Time for vaksine"
+          },
+          {
+            "code": "Lab",
+            "display": "Time på lab"
+          },
+          {
+            "code": "Koronatest",
+            "display": "Innført for håndtering av pandemien"
+          },
+          {
+            "code": "Koronavaksine",
+            "display": "Innført for håndtering av pandemien"
+          }
+        ]
+      },
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/hn-scheduleAndSlot-type-cs"
+      }
+    ]
+  }
+}

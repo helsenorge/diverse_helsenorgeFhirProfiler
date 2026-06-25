@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "HnBetingetTilgangsbegrensningCS",
+  "id": "hn-tilgangsbegrensning",
+  "title": "Helsenorge tilgangsbegrensning metatag code system",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.9603",
+  "concept": [
+    {
+      "code": "N",
+      "display": "N",
+      "definition": "Normal (både foreldre og ungdom selv har tilgang)"
+    },
+    {
+      "code": "NORN_FORANS",
+      "display": "NORN_FORANS",
+      "definition": "Nektet, foreldreansvarlig. (Kan kun ses av ungdommen selv (foreldre vil ikke kunne se dette informasjonselementet))"
+    },
+    {
+      "code": "NORN_UNGDOM",
+      "display": "NORN_UNGDOM",
+      "definition": "Nektet, ungdom. (Kan kun ses av foreldre (ungdommen vil ikke kunne se dette informasjonselementet))"
+    }
+  ],
+  "version": "1.0.0",
+  "caseSensitive": true,
+  "count": 3
+}

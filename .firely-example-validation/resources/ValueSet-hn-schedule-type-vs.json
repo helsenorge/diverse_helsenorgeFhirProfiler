@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HnScheduleTypeVS",
+  "id": "hn-schedule-type-vs",
+  "title": "hn-schedule-type-vs",
+  "description": "Value set for schedule type",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-schedule-type-vs",
+  "version": "1.3.2",
+  "experimental": true,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/hn-schedule-type-cs"
+      }
+    ]
+  }
+}

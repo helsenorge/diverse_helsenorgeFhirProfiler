@@ -1,0 +1,65 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "HnAppointmentFlagCodeCS",
+  "id": "hn-appointment-flag-code-cs",
+  "title": "hn-appointment-flag-code-cs",
+  "description": "Code system used for Flag codes in nytimeløsing",
+  "url": "http://helsenorge.no/fhir/CodeSystem/hn-appointment-flag-code-cs",
+  "concept": [
+    {
+      "code": "cancel",
+      "display": "Innbygger kan kansellere timen"
+    },
+    {
+      "code": "canChangeAppointmentDialog",
+      "display": "Innbygger kan be om endret time (Dialogmeldinger)"
+    },
+    {
+      "code": "canUseShortNotice",
+      "display": "Innbygger kan komme på kort varsel"
+    },
+    {
+      "code": "canCancelServiceRequest",
+      "display": "Innbygger kan be om at behandlingsløp avsluttes"
+    },
+    {
+      "code": "canChangeConferenceType",
+      "display": "Innbygger kan be om endret konferanse type"
+    },
+    {
+      "code": "canAcknowledge",
+      "display": "Timen/opphold kan bekreftes av innbygger"
+    },
+    {
+      "code": "canChangeAppointment",
+      "display": "Innbygger kan be om endret time"
+    },
+    {
+      "code": "canHaveAppointmentDetails",
+      "display": "Det finnes ytterlege timedetaljer på time/timeavtale som kan hentes"
+    },
+    {
+      "code": "canInitiateDialog",
+      "display": "Dialog kan inisieres"
+    }
+  ],
+  "version": "1.0.1",
+  "experimental": false,
+  "date": "2025-12-02T14:53:52+01:00",
+  "publisher": "Example Publisher",
+  "contact": [
+    {
+      "name": "Example Publisher",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://example.org/example-publisher"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 9
+}

@@ -7,10 +7,10 @@ name: HelsenorgeProfiles
 title: Helsenorge FHIR Profiles
 description: FHIR R4 implementation guide for Helsenorge profiles, extensions, terminology, and examples.
 status: draft
-version: 2.4.6-beta
+version: 2.5.8-beta
 fhirVersion: 4.0.1
 copyrightYear: 2026+
-releaseLabel: 2.4.6-beta
+releaseLabel: 2.5.8-beta
 license: CC0-1.0
 
 publisher:

@@ -1,0 +1,31 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "not-present",
+  "name": "NoKodeverk7303",
+  "id": "no-kodeverk-7303.codesystem",
+  "title": "7303 Svarrapporteringsprioritet",
+  "description": "Svarrapporteringsprioritet. Kodeverket har ikke noen beskrivelse.",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-7303.codesystem",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.7303"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true
+}

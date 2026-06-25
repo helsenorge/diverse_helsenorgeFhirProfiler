@@ -1,0 +1,58 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-basis-changeConferenceType",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-changeConferenceType",
+  "version": "1.0.1",
+  "name": "HnBasisChangeConferenceType",
+  "title": "hn-basis-changeConferenceType",
+  "status": "draft",
+  "date": "2025-12-02T13:53:52+00:00",
+  "description": "The basis extension expressing that Patient askes to use anouther type of conference",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "AppointmentResponse",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "hn-basis-changeConferenceType",
+        "definition": "The basis extension expressing that Patient askes to use anouther type of conference",
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-changeConferenceType"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Pasient askes for changed conference type.",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.no/fhir/ValueSet/no-basis-virtual-service-type"
+        }
+      }
+    ]
+  }
+}

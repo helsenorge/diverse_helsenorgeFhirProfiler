@@ -1,0 +1,60 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "HnScheduleAndSlotTypeCS",
+  "id": "hn-scheduleAndSlot-type-cs",
+  "title": "Codes that should be used for schedule and SlotType.",
+  "description": "Codes that should be used for schedule and SlotType.",
+  "url": "http://helsenorge.no/fhir/CodeSystem/hn-scheduleAndSlot-type-cs",
+  "concept": [
+    {
+      "code": "Poliklinisktime",
+      "display": "Poliklinisk time"
+    },
+    {
+      "code": "Innleggelse",
+      "display": "Innleggelse"
+    },
+    {
+      "code": "Dagbehandling",
+      "display": "Dagbehandling"
+    },
+    {
+      "code": "Hjemmebesøk",
+      "display": "Hjemmebesøk"
+    },
+    {
+      "code": "Konsultasjon",
+      "display": "Konsultasjon"
+    },
+    {
+      "code": "Bildediagnostikk",
+      "display": "Bildediagnostikk"
+    },
+    {
+      "code": "Personlig",
+      "display": "Personlig"
+    },
+    {
+      "code": "Blodbank",
+      "display": "Blodbank"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": true,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 8
+}

@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CS8116DnrFnrVS",
+  "id": "cs-8116-Dnr-Fnr-vs",
+  "title": "DNR og FNR fra Volven 8116",
+  "description": "ValueSet basert på 8116 som inkluderer kun FNR og DNR",
+  "url": "http://helsenorge.no/fhir/ValueSet/cs-8116-Dnr-Fnr-vs",
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.8116",
+        "concept": [
+          {
+            "code": "FNR",
+            "display": "Fødselsnummer"
+          },
+          {
+            "code": "DNR",
+            "display": "D-nummer"
+          }
+        ]
+      }
+    ]
+  }
+}

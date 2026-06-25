@@ -1,0 +1,142 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-extension-representant",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-extension-representant",
+  "version": "1.3.2",
+  "name": "HnExtensionRepresentant",
+  "title": "Representant",
+  "status": "draft",
+  "date": "2025-10-20T21:59:35+00:00",
+  "description": "Person som representerer en annen etter avtale, vedtakk mm.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Representant",
+        "definition": "Person som representerer en annen etter avtale, vedtakk mm."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:name",
+        "path": "Extension.extension",
+        "sliceName": "name",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:name.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:name.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "name"
+      },
+      {
+        "id": "Extension.extension:name.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "HumanName",
+            "profile": [
+              "http://hl7.no/fhir/StructureDefinition/no-basis-HumanName"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:ident",
+        "path": "Extension.extension",
+        "sliceName": "ident",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:ident.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:ident.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "ident"
+      },
+      {
+        "id": "Extension.extension:ident.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:ident.value[x].type.coding",
+        "path": "Extension.extension.value[x].type.coding",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/cs-8116-Dnr-Fnr-vs"
+        }
+      },
+      {
+        "id": "Extension.extension:ident.value[x].type.coding.system",
+        "path": "Extension.extension.value[x].type.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:ident.value[x].type.coding.code",
+        "path": "Extension.extension.value[x].type.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Extension.extension:ident.value[x].value",
+        "path": "Extension.extension.value[x].value",
+        "min": 1
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/hn-extension-representant"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

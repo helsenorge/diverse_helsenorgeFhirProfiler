@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ansiennitetsDato",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/no-ansiennitets-dato",
+  "version": "1.3.2",
+  "name": "NoAnsiennitetsDato",
+  "title": "Ansiennitets dato",
+  "status": "draft",
+  "description": "Seniority date is the first date a referral was received by specialist health",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Ansiennitets dato",
+        "definition": "Seniority date is the first date a referral was received by specialist health"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/no-ansiennitets-dato"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Ansiennitetsdato er definert som den første mottaksdatoen for en henvisning til spesialisthelsetjenesten",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

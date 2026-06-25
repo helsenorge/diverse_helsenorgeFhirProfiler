@@ -1,0 +1,23 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "HnVarslingCS",
+  "id": "hn-varsling",
+  "title": "Helsenorge varsling metatag code system",
+  "description": "Codes for controlling notification behaviour in Helsenorge meta.tag.",
+  "url": "http://helsenorge.no/fhir/varsling",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Innbygger skal ikke varsles"
+    },
+    {
+      "code": "9",
+      "display": "Benytt angitt navn som avsender i varsel til innbygger"
+    }
+  ],
+  "version": "1.0.0",
+  "caseSensitive": true,
+  "count": 2
+}
