@@ -1,0 +1,191 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-basis-schedule",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-schedule",
+  "version": "1.3.2",
+  "name": "HnBasisSchedule",
+  "title": "HnBasisSchedule",
+  "status": "draft",
+  "description": "FHIR Schedule brukes for å hente timebøker tilgjengelige for timebestilling for innbygger. Profilen er basert på R4.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Schedule",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Schedule",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Schedule.extension",
+        "path": "Schedule.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Schedule.extension:freeSlotPlanningHorizon",
+        "path": "Schedule.extension",
+        "sliceName": "freeSlotPlanningHorizon",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://helsenorge.no/fhir/StructureDefinition/hn-extension-free-slot-planningHorizon"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Schedule.identifier",
+        "path": "Schedule.identifier",
+        "short": "Identifer must be UUID/GUID",
+        "definition": "Identifer must be UUID/GUID",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Schedule.identifier.system",
+        "path": "Schedule.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Schedule.identifier.value",
+        "path": "Schedule.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Schedule.identifier.assigner",
+        "path": "Schedule.identifier.assigner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.no/fhir/StructureDefinition/no-basis-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Schedule.active",
+        "path": "Schedule.active",
+        "patternBoolean": true
+      },
+      {
+        "id": "Schedule.serviceCategory",
+        "path": "Schedule.serviceCategory",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/ValueSet/service-category"
+        }
+      },
+      {
+        "id": "Schedule.serviceCategory.coding",
+        "path": "Schedule.serviceCategory.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-schedule",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Schedule.serviceCategory.coding.system",
+        "path": "Schedule.serviceCategory.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Schedule.serviceType",
+        "path": "Schedule.serviceType",
+        "short": "Type timebok",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-schedule-type-vs"
+        }
+      },
+      {
+        "id": "Schedule.serviceType.coding",
+        "path": "Schedule.serviceType.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-schedule",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Schedule.serviceType.coding.system",
+        "path": "Schedule.serviceType.coding.system",
+        "min": 1
+      },
+      {
+        "id": "Schedule.specialty.coding",
+        "path": "Schedule.specialty.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-schedule",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Schedule.actor",
+        "path": "Schedule.actor",
+        "short": "Currently only HealthcareService or Practitioner (basic and no-basic profiles) are referenced as valid actors.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.no/fhir/StructureDefinition/no-basis-HealthcareService",
+              "http://hl7.no/fhir/StructureDefinition/no-basis-Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Schedule.actor.type",
+        "path": "Schedule.actor.type",
+        "min": 1
+      },
+      {
+        "id": "Schedule.comment",
+        "path": "Schedule.comment",
+        "short": "Comments regarding the scheduler.",
+        "definition": "Comments regarding the scheduler including short information about the timebook."
+      }
+    ]
+  }
+}

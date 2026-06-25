@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-basis-Recurring",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-Recurring",
+  "version": "1.0.1",
+  "name": "HnBasisRecurring",
+  "title": "hn-basis-recurring",
+  "status": "draft",
+  "description": "Indicates that this appointment is of recurrence type. In R5 this is handled by own structure.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Appointment",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "no-basis-recurring",
+        "definition": "Indicates that this appointment is of recurrence type. In R5 this is handled by own structure.",
+        "max": "1",
+        "mustSupport": false
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-Recurring"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "The appointment is part of recurring session.",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false
+      }
+    ]
+  }
+}

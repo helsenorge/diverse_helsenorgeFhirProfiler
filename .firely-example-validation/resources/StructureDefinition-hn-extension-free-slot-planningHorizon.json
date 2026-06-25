@@ -1,0 +1,145 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-extension-free-slot-planningHorizon",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-extension-free-slot-planningHorizon",
+  "version": "1.3.2",
+  "name": "HnExtensionFreeSlotPlanningHorizon",
+  "title": "Periode for første og siste ledige slot i timebok",
+  "status": "draft",
+  "description": "Periode for første og siste ledige slot i timebok. Tid og referanse",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Schedule",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Periode for første og siste ledige slot i timebok",
+        "definition": "Periode for første og siste ledige slot i timebok. Tid og referanse"
+      },
+      {
+        "id": "Extension.extension:freePlanningHorizon",
+        "path": "Extension.extension",
+        "sliceName": "freePlanningHorizon",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:freePlanningHorizon.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:freePlanningHorizon.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "freePlanningHorizon"
+      },
+      {
+        "id": "Extension.extension:freePlanningHorizon.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Start tidspunkt for første ledige slot og slutt tidspunkt for siste ledige slot i timebok.",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:firstFreeSlot",
+        "path": "Extension.extension",
+        "sliceName": "firstFreeSlot",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:firstFreeSlot.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:firstFreeSlot.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "firstFreeSlot"
+      },
+      {
+        "id": "Extension.extension:firstFreeSlot.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Referanse til første ledige slot i timebok.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Slot",
+              "http://helsenorge.no/fhir/StructureDefinition/hn-basis-slot"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:lastFreeSlot",
+        "path": "Extension.extension",
+        "sliceName": "lastFreeSlot",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.extension:lastFreeSlot.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:lastFreeSlot.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "lastFreeSlot"
+      },
+      {
+        "id": "Extension.extension:lastFreeSlot.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Referanse til siste ledige slot i timebok.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Slot",
+              "http://helsenorge.no/fhir/StructureDefinition/hn-basis-slot"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/hn-extension-free-slot-planningHorizon"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

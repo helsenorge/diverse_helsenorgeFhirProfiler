@@ -1,0 +1,62 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk8445",
+  "id": "no-kodeverk-8445.codesystem",
+  "title": "8445 Ventetid sluttkode",
+  "description": "Dette kodeverket inneholder koder for avvikling.",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8445.codesystem",
+  "concept": [
+    {
+      "code": "1",
+      "display": "Helsehjelp er påbegynt"
+    },
+    {
+      "code": "2",
+      "display": "Pasienten ønsker ikke helsehjelp"
+    },
+    {
+      "code": "3",
+      "display": "Pasienten er henvist til et annet sykehus/institusjon (unntatt fritt behandlingsvalg)"
+    },
+    {
+      "code": "4",
+      "display": "Pasienten har valgt annet sykehus/institusjon"
+    },
+    {
+      "code": "5",
+      "display": "Pasienten mottar helsehjelp ved annet sykehus/institusjon rekvirert av HELFO"
+    },
+    {
+      "code": "7",
+      "display": "Pasienten er henvist til avtalespesialist"
+    },
+    {
+      "code": "9",
+      "display": "Annen årsak til ventetid slutt/helsehjelp uaktuelt"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.8445"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2022-03-17",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 7
+}

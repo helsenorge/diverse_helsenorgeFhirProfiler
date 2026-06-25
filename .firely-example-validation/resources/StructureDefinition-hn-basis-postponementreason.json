@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-basis-postponementreason",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-postponementreason",
+  "version": "1.0.1",
+  "name": "HnBasisPostponementReason",
+  "title": "hn-basis-postponementreason",
+  "status": "draft",
+  "description": "The reason code for the postponement.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Appointment",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "hn-basis-postponementreason",
+        "definition": "The reason code for the postponement."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-postponementreason"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "code": [
+          {
+            "system": "urn:oid:2.16.578.1.12.4.1.1.8446",
+            "display": "Volven kodeverk 8446 - Utsettelseskode"
+          }
+        ],
+        "short": "The reason for postponing the appointment",
+        "definition": "The reason for postponing the appointment",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "urn:oid:2.16.578.1.12.4.1.1.8446",
+          "description": "Volven"
+        }
+      }
+    ]
+  }
+}

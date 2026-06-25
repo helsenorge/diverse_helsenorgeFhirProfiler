@@ -1,0 +1,138 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-basis-AppointmentResponse",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-AppointmentResponse",
+  "version": "1.0.1",
+  "name": "HnBasisAppointmentResponse",
+  "title": "hn-basis-AppointmentResponse",
+  "status": "draft",
+  "description": "Basisprofil for AppointmentResponse used in 'ny timeløsning'.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AppointmentResponse",
+  "baseDefinition": "http://hl7.no/fhir/StructureDefinition/no-basis-AppointmentResponse",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AppointmentResponse.extension:changeConferenceType",
+        "path": "AppointmentResponse.extension",
+        "sliceName": "changeConferenceType",
+        "definition": "Patient can ask for anouther type of conference",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://helsenorge.no/fhir/StructureDefinition/hn-basis-changeConferenceType"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AppointmentResponse.extension:changeConferenceType.value[x]",
+        "path": "AppointmentResponse.extension.value[x]",
+        "definition": "Type of conference that Patient askes for"
+      },
+      {
+        "id": "AppointmentResponse.identifier",
+        "path": "AppointmentResponse.identifier",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "AppointmentResponse.identifier.system",
+        "path": "AppointmentResponse.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "AppointmentResponse.identifier.value",
+        "path": "AppointmentResponse.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "AppointmentResponse.appointment.reference",
+        "path": "AppointmentResponse.appointment.reference",
+        "max": "0"
+      },
+      {
+        "id": "AppointmentResponse.participantType.coding",
+        "path": "AppointmentResponse.participantType.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-AppointmentResponse",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "AppointmentResponse.actor",
+        "path": "AppointmentResponse.actor",
+        "short": "Use only logical reference",
+        "definition": "Only use of logical reference is allowed for reference to an patient in this profile",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AppointmentResponse.actor.reference",
+        "path": "AppointmentResponse.actor.reference",
+        "max": "0"
+      },
+      {
+        "id": "AppointmentResponse.actor.type",
+        "path": "AppointmentResponse.actor.type",
+        "min": 1,
+        "patternUri": "Patient"
+      },
+      {
+        "id": "AppointmentResponse.actor.identifier",
+        "path": "AppointmentResponse.actor.identifier",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "inv-a",
+            "human": "Only urn:oid:2.16.578.1.12.4.1.4.1 (FNR) or urn:oid:2.16.578.1.12.4.1.4.2 (DNR) are allowed as systems to identify patient in this profile.",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-AppointmentResponse",
+            "severity": "error",
+            "expression": "system = 'urn:oid:2.16.578.1.12.4.1.4.1' or system = 'urn:oid:2.16.578.1.12.4.1.4.2'"
+          }
+        ]
+      },
+      {
+        "id": "AppointmentResponse.actor.identifier.type.coding",
+        "path": "AppointmentResponse.actor.identifier.type.coding",
+        "constraint": [
+          {
+            "key": "inv-3",
+            "human": "Only FNR or DNR number are allowed as codes to identify patient in this profile.",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-AppointmentResponse",
+            "severity": "error",
+            "expression": "code = 'FNR' or code = 'DNR'"
+          }
+        ]
+      },
+      {
+        "id": "AppointmentResponse.actor.identifier.system",
+        "path": "AppointmentResponse.actor.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "AppointmentResponse.actor.identifier.value",
+        "path": "AppointmentResponse.actor.identifier.value",
+        "min": 1
+      }
+    ]
+  }
+}

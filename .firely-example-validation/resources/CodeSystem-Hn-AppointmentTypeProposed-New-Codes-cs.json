@@ -1,0 +1,36 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "HnAppointmentTypeProposedNewCodesCS",
+  "id": "Hn-AppointmentTypeProposed-New-Codes-cs",
+  "title": "Default codes for appointmentType.",
+  "description": "New codes that should be used as default for appointmentType.",
+  "url": "http://helsenorge.no/fhir/CodeSystem/Hn-AppointmentTypeProposed-New-Codes-cs",
+  "concept": [
+    {
+      "code": "Poliklinisktime",
+      "display": "Poliklinisk time"
+    },
+    {
+      "code": "Innleggelse",
+      "display": "Innleggelse"
+    },
+    {
+      "code": "Dagbehandling",
+      "display": "Dagbehandling"
+    },
+    {
+      "code": "Konsultasjon",
+      "display": "Konsultasjon"
+    },
+    {
+      "code": "Bildediagnostikk",
+      "display": "Bildediagnostikk"
+    }
+  ],
+  "version": "1.0.1",
+  "date": "2025-12-02T13:53:52+00:00",
+  "caseSensitive": true,
+  "count": 5
+}

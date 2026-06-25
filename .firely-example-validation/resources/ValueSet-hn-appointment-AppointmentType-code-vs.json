@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HnAppointmentAppointmentTypeVS",
+  "id": "hn-appointment-AppointmentType-code-vs",
+  "title": "hn-appointment-AppointmentType-code-vs",
+  "description": "Value set for AppointmentType codes in nytimeløsing that includes set of codes from diferent code systems",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-AppointmentType-code-vs",
+  "version": "1.0.1",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.7617",
+        "concept": [
+          {
+            "code": "Hjemmebesok",
+            "display": "Hjemmebesøk"
+          }
+        ]
+      },
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.8406"
+      },
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/Hn-AppointmentTypeProposed-New-Codes-cs"
+      }
+    ]
+  }
+}

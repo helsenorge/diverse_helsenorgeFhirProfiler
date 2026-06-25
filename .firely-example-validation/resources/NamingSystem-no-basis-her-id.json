@@ -1,0 +1,43 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "no-basis-her-id",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+      "valueUri": "http://helsenorge.no/fhir/NamingSystem/no-basis-her-id"
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+      "valueString": "1.3.2"
+    }
+  ],
+  "name": "HERId",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2022-02-10",
+  "responsible": "Norsk helsenett",
+  "description": "Identifikator for kommunikasjonsparter i Helsenettet..",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://hl7.no/fhir/NamingSystem/HERid",
+      "preferred": false
+    },
+    {
+      "type": "oid",
+      "value": "2.16.578.1.12.4.1.2",
+      "preferred": true
+    }
+  ]
+}

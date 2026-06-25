@@ -1,0 +1,167 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk8219",
+  "id": "no-kodeverk-8219.codesystem",
+  "title": "8219 Kodeverk for patologisk-anatomiske undersøkelser",
+  "description": "Kodene beskriver ulike typer patologi-undersøkelser.",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8219.codesystem",
+  "concept": [
+    {
+      "code": "K",
+      "display": "Kromosomundersøkelse"
+    },
+    {
+      "code": "EM",
+      "display": "Ultrastrukturell diagnostikk"
+    },
+    {
+      "code": "FLW",
+      "display": "Flowcytometri"
+    },
+    {
+      "code": "PCR",
+      "display": "PCR-analyse"
+    },
+    {
+      "code": "H",
+      "display": "Hormonreseptoranalyse"
+    },
+    {
+      "code": "PL",
+      "display": "Ploidianalyse"
+    },
+    {
+      "code": "M",
+      "display": "Molekylærgenetisk undersøkelse"
+    },
+    {
+      "code": "MI",
+      "display": "Mikroskopisk undersøkelse"
+    },
+    {
+      "code": "A",
+      "display": "Histologisk undersøkelse"
+    },
+    {
+      "code": "MA",
+      "display": "Makroskopisk undersøkelse"
+    },
+    {
+      "code": "MAMI",
+      "display": "Makro- og mikroskopisk undersøkelse"
+    },
+    {
+      "code": "G",
+      "display": "Histologi relatert til genetisk us"
+    },
+    {
+      "code": "H1",
+      "display": "Vanlig obduksjon"
+    },
+    {
+      "code": "H2",
+      "display": "Nevropatologisk us"
+    },
+    {
+      "code": "H3",
+      "display": "Obduksjon + Nevropatologisk us"
+    },
+    {
+      "code": "F",
+      "display": "Frysesnitt - hurtigdiagnostikk"
+    },
+    {
+      "code": "BL",
+      "display": "Blodprøve"
+    },
+    {
+      "code": "HPV",
+      "display": "HPV-test"
+    },
+    {
+      "code": "C",
+      "display": "Cytologisk undersøkelse",
+      "definition": "Generell cytologisk undersøkelse"
+    },
+    {
+      "code": "VC",
+      "display": "Væskebasert cytologi"
+    },
+    {
+      "code": "D",
+      "display": "Vaginal - Cervix cytologi"
+    },
+    {
+      "code": "E",
+      "display": "Cytologisk us (non-gyn)"
+    },
+    {
+      "code": "FNA",
+      "display": "Finnålsaspirasjon"
+    },
+    {
+      "code": "P",
+      "display": "Punksjonscytologi"
+    },
+    {
+      "code": "R",
+      "display": "Rescreening/Us av restmateriale"
+    },
+    {
+      "code": "RM",
+      "display": "Rettsmedisinsk obduksjon"
+    },
+    {
+      "code": "T",
+      "display": "Telepatologi"
+    },
+    {
+      "code": "GO",
+      "display": "Gammel obduksjon"
+    },
+    {
+      "code": "EMI",
+      "display": "Elektronmikroskopi"
+    },
+    {
+      "code": "MP",
+      "display": "Molekylærpatologisk us"
+    },
+    {
+      "code": "FISH",
+      "display": "FISH-analyse"
+    },
+    {
+      "code": "LKP",
+      "display": "Likkjellerprotokoll"
+    },
+    {
+      "code": "LP",
+      "display": "Likprotokoll"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.8219"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 33
+}

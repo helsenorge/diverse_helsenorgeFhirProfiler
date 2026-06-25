@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HnAppointmentFlagCodeVS",
+  "id": "hn-appointment-flag-code-vs",
+  "title": "hn-appointment-flag-code-vs",
+  "description": "Value set for Flag codes in nytimeløsing",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-flag-code-vs",
+  "version": "1.0.1",
+  "experimental": true,
+  "date": "2025-12-02T14:53:52+01:00",
+  "publisher": "Example Publisher",
+  "contact": [
+    {
+      "name": "Example Publisher",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://example.org/example-publisher"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/hn-appointment-flag-code-cs"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ServiceRequestCategoryVS",
+  "id": "serviceRequest-category-vs",
+  "title": "ServiceRequest Category Value Set",
+  "description": "Kode som klassifiserer tjenesten for søk, sortering og visningsformål. (flere koder vil leggest til senere)",
+  "url": "http://helsenorge.no/fhir/ValueSet/serviceRequest-category-vs",
+  "version": "1.3.2",
+  "experimental": true,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "1269515004",
+            "display": "Face to face consultation with patient"
+          },
+          {
+            "code": "719410009",
+            "display": "Consultation via video conference"
+          },
+          {
+            "code": "3457005",
+            "display": "Patient referral"
+          }
+        ]
+      }
+    ]
+  }
+}

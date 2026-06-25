@@ -1,0 +1,46 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "no-basis-foedselsnummer",
+  "meta": {
+    "versionId": "1.0"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+      "valueUri": "http://helsenorge.no/fhir/NamingSystem/no-basis-foedselsnummer"
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+      "valueString": "1.3.2"
+    }
+  ],
+  "name": "Foedselsnummer",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2018-08-13",
+  "responsible": "Skatteetaten",
+  "description": "Fødselsnummer is the official identification of a Norwegian citizen and is registered in the repository called folkeregisteret. Fødselsnummer is a 11-digit number containing 2 control digits.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://hl7.no/fhir/NamingSystem/FNR",
+      "preferred": false
+    },
+    {
+      "type": "oid",
+      "value": "2.16.578.1.12.4.1.4.1",
+      "preferred": true
+    }
+  ]
+}

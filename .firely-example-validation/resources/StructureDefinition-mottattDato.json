@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mottattDato",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/no-mottatt-dato",
+  "version": "1.3.2",
+  "name": "NoMottattDato",
+  "title": "Mottatt dato",
+  "status": "draft",
+  "date": "2025-10-20T21:59:35+00:00",
+  "description": "Date and time when the order was received.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Mottatt dato",
+        "definition": "Date and time when the order was received."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/no-mottatt-dato"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Mottattdato er den formelle datoen en henvisning blir registrert og mottatt av mottaker",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HnCancellationReasonVS",
+  "id": "hn-cancellation-reason-vs",
+  "title": "Helsenorge Cancellation Reason Value Set",
+  "description": "Cancellation reasons. Codes SHOULD be taken from 8445. 9179 is allowed as fallback.",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-cancellation-reason-vs",
+  "version": "1.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.8445"
+      },
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.9179"
+      }
+    ]
+  }
+}

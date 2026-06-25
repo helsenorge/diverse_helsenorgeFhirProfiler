@@ -1,0 +1,153 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-basis-slot",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-slot",
+  "version": "1.3.2",
+  "name": "HnBasisSlot",
+  "title": "HnBasisSlot",
+  "status": "draft",
+  "description": "Profil for slot i Helsenorge. Basert på FHIR Slot (R4)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Slot",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Slot",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Slot.identifier",
+        "path": "Slot.identifier",
+        "short": "Identifer must be UUID/GUID",
+        "definition": "Identifer must be UUID/GUID",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Slot.identifier.system",
+        "path": "Slot.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "Slot.identifier.value",
+        "path": "Slot.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Slot.identifier.assigner",
+        "path": "Slot.identifier.assigner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.no/fhir/StructureDefinition/no-basis-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Slot.serviceCategory",
+        "path": "Slot.serviceCategory",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/ValueSet/service-category"
+        }
+      },
+      {
+        "id": "Slot.serviceCategory.coding",
+        "path": "Slot.serviceCategory.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-slot",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Slot.serviceType",
+        "path": "Slot.serviceType",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-scheduleandslot-type-vs"
+        }
+      },
+      {
+        "id": "Slot.serviceType.coding",
+        "path": "Slot.serviceType.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-slot",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Slot.specialty.coding",
+        "path": "Slot.specialty.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-slot",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Slot.appointmentType",
+        "path": "Slot.appointmentType",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-scheduleandslot-type-vs"
+        }
+      },
+      {
+        "id": "Slot.appointmentType.coding",
+        "path": "Slot.appointmentType.coding",
+        "constraint": [
+          {
+            "key": "inv-4",
+            "human": "If code is used in a codable consept the system must be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-slot",
+            "severity": "error",
+            "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Slot.schedule",
+        "path": "Slot.schedule",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Schedule",
+              "http://helsenorge.no/fhir/StructureDefinition/hn-basis-schedule"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

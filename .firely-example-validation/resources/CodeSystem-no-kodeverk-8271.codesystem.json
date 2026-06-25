@@ -1,0 +1,46 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk8271",
+  "id": "no-kodeverk-8271.codesystem",
+  "title": "8271 Resistens",
+  "description": "Svarverdier til bruk i resistensbestemmelser (SIR)",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8271.codesystem",
+  "concept": [
+    {
+      "code": "S",
+      "display": "Sensitiv, standarddose"
+    },
+    {
+      "code": "I",
+      "display": "Sensitiv, økt eksponering"
+    },
+    {
+      "code": "R",
+      "display": "Resistent"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.8271"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 3
+}

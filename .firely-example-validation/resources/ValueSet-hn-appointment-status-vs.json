@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "hnAppointmentStatusVS",
+  "id": "hn-appointment-status-vs",
+  "title": "Helsenorge Appointment Status Value Set",
+  "description": "Value set for Helsenorge FHIR appointment status codes.",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-status-vs",
+  "version": "2.1.0",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/appointmentstatus",
+        "concept": [
+          {
+            "code": "booked"
+          },
+          {
+            "code": "fulfilled"
+          },
+          {
+            "code": "cancelled"
+          },
+          {
+            "code": "noshow"
+          },
+          {
+            "code": "entered-in-error"
+          },
+          {
+            "code": "proposed"
+          }
+        ]
+      }
+    ]
+  }
+}

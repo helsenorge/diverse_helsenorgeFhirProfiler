@@ -1,0 +1,109 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NoKodeverk8231",
+  "id": "no-kodeverk-8231.codesystem",
+  "title": "8231 Type tekstsvar",
+  "description": "Begrunnelse for rekvisisjon/henvisning",
+  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8231.codesystem",
+  "concept": [
+    {
+      "code": "BG",
+      "display": "Begrunnelse",
+      "definition": "Uspesifisert"
+    },
+    {
+      "code": "BUP-BM",
+      "display": "Henvisningsgrunn barnets miljø"
+    },
+    {
+      "code": "BUP-HG",
+      "display": "Henvisningsgrunn barnet"
+    },
+    {
+      "code": "DIAG",
+      "display": "Diagnose",
+      "definition": "Når den ikke oppgis strukturert"
+    },
+    {
+      "code": "FA",
+      "display": "Familie/sosialt"
+    },
+    {
+      "code": "FO",
+      "display": "Forløp og behandling"
+    },
+    {
+      "code": "FU",
+      "display": "Funn og undersøkelsesresultater"
+    },
+    {
+      "code": "HJ",
+      "display": "Funksjonsnivå/hjelpetiltak"
+    },
+    {
+      "code": "IP",
+      "display": "Informasjon til pasient/pårørende"
+    },
+    {
+      "code": "KF",
+      "display": "Kontroll pga. tidligere funn"
+    },
+    {
+      "code": "MAAL",
+      "display": "Mål for oppholdet"
+    },
+    {
+      "code": "MU",
+      "display": "Innkalt til masseundersøkelse"
+    },
+    {
+      "code": "PROB",
+      "display": "Aktuell problemstilling"
+    },
+    {
+      "code": "RU",
+      "display": "Rutineundersøkelse utenom masseundersøkelse"
+    },
+    {
+      "code": "SVU",
+      "display": "Spesialistvurdering",
+      "definition": "Dersom henvisningen har blitt vurdert av en spesialist skal det finnes en forekomst av ReasonAsText med SVU som kodeverdi. Relevant epikriseinformasjon kan legges i TectResultValue feltet."
+    },
+    {
+      "code": "UP",
+      "display": "Ubesvarte prøver"
+    },
+    {
+      "code": "UTRED",
+      "display": "Forventet utredning/behandling"
+    },
+    {
+      "code": "VU",
+      "display": "Vurdering"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.8231"
+    }
+  ],
+  "version": "1.3.2",
+  "experimental": false,
+  "date": "2025-10-20T23:59:35+02:00",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "NO",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Norway"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 18
+}

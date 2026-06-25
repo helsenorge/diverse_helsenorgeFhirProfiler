@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "tba-organizationcoverage",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/tba-organizationcoverage",
+  "version": "1.0.1",
+  "name": "TbaOrganizationcoverage",
+  "status": "draft",
+  "date": "2019-05-15",
+  "description": "The coverage of a service hosted by one of the organizations. Specifically used by norwegian Municipalities",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Organization",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "definition": "The coverage of a service hosted by one of the organizations. Specifically used by norwegian Municipalities"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/tba-organizationcoverage"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.no/fhir/StructureDefinition/no-basis-Organization"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
