@@ -6,9 +6,9 @@
   "title": "hn-appointment-ServiceCategory-code-vs",
   "description": "Value set for ServiceCategory codes in nytimeløsing",
   "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-ServiceCategory-code-vs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "experimental": true,
-  "date": "2025-12-02T13:53:52+00:00",
+  "date": "2026-08-12T09:13:52+00:00",
   "publisher": "Example Publisher",
   "contact": [
     {
@@ -40,8 +40,52 @@
         "system": "urn:oid:2.16.578.1.12.4.1.1.7619",
         "concept": [
           {
+            "code": "3",
+            "display": "Helsestasjon for barn"
+          },
+          {
+            "code": "4",
+            "display": "Skolehelsetjeneste"
+          },
+          {
+            "code": "5",
+            "display": "Jordmor"
+          },
+          {
+            "code": "6",
+            "display": "Helsestasjon for ungdom"
+          },
+          {
             "code": "7",
             "display": "Hjemmetjenester"
+          },
+          {
+            "code": "8",
+            "display": "Legevakt"
+          },
+          {
+            "code": "9",
+            "display": "Smittevern"
+          },
+          {
+            "code": "10",
+            "display": "Vaksinasjon"
+          },
+          {
+            "code": "16",
+            "display": "Frisklivssentral"
+          },
+          {
+            "code": "17",
+            "display": "Psykisk helse"
+          },
+          {
+            "code": "18",
+            "display": "Rus og avhengighet"
+          },
+          {
+            "code": "19",
+            "display": "Sykehjem"
           }
         ]
       }
