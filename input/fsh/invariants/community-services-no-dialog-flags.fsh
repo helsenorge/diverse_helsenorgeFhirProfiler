@@ -1,0 +1,4 @@
+Invariant: community-services-no-dialog-flags
+Description: "For community health services (3, 4, 5, 6, 7, 8, 9, 10, 16, 17, 18, and 19), contained Flag resources must not use the codes canAcknowledge, canChangeAppointmentDialog, canHaveAppointmentDetails, or canInitiateDialog."
+* severity = #error
+* expression = "serviceCategory.coding.where(code in ('3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '16' | '17' | '18' | '19')).empty() or contained.ofType(Flag).all(code.coding.where(code in ('canAcknowledge' | 'canChangeAppointmentDialog' | 'canHaveAppointmentDetails' | 'canInitiateDialog')).empty())"

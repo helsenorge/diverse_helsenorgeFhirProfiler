@@ -456,7 +456,6 @@
           "reference": "ValueSet/hn-cancellation-reason-vs"
         },
         "name": "Helsenorge Cancellation Reason Value Set",
-        "description": "Cancellation reasons. Codes SHOULD be taken from 8445. 9179 is allowed as fallback.",
         "exampleBoolean": false
       },
       {
