@@ -20,11 +20,39 @@
         "path": "Appointment",
         "constraint": [
           {
-            "key": "cancelationReason-inv",
-            "human": "Cancelation reason MUST be set when status=cancelled and the appointment is not partOf another appointment",
+            "key": "appointment-participant-actor-patient-reference-identifier",
+            "human": "When actor is a Patient logical reference MUST be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "warning",
+            "expression": "actor.type = 'Patient' implies actor.identifier.exists()"
+          },
+          {
+            "key": "appointment-participant-actor-patient-reference-reference",
+            "human": "When actor is a Patient, literal reference (relative, internal or absolute) MUST not be used",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "warning",
+            "expression": "(actor.type = 'Patient') implies actor.reference.exists().not()"
+          },
+          {
+            "key": "inv-3",
+            "human": "Only FNR or DNR number are allowed as codes to identify patient in this profile.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "(status = 'cancelled' and partOf.empty()) implies cancelationReason.exists()"
+            "expression": "code = 'FNR' or code = 'DNR'"
+          },
+          {
+            "key": "must-be-max-1000-chars",
+            "human": "Length MUST be <= 1000",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "$this.length() <= 1000"
+          },
+          {
+            "key": "cancellationReason-inv",
+            "human": "Cancellation reason MUST be set when status=cancelled and the appointment is not partOf another appointment",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "(status = 'cancelled' and partOf.empty()) implies cancellationReason.exists()"
           },
           {
             "key": "contained-location-must-have-managingorganization",
@@ -35,10 +63,10 @@
           },
           {
             "key": "hn-app-primary-2",
-            "human": "If serviceCategory is 7, basedOn must not be used",
+            "human": "If basedOn is present, serviceCategory must be 27 or 30",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or basedOn.empty()"
+            "expression": "basedOn.empty() or serviceCategory.coding.code.where($this = '27' or $this = '30').exists()"
           },
           {
             "key": "start-required-inv",
@@ -63,45 +91,45 @@
           },
           {
             "key": "hn-app-primary-4",
-            "human": "If serviceCategory is 7, partOf must not be used",
+            "human": "partOf is only allowed when serviceCategory is 27 or 30",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or partOf.empty()"
+            "expression": "partOf.empty() or serviceCategory.coding.where(code = '27' or code = '30').exists()"
           },
           {
             "key": "hn-app-primary-5",
-            "human": "postponementReason cannot be used when serviceCategory is 7",
+            "human": "postponementReason is only allowed when serviceCategory is 27 or 30",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or postponementReason.empty()"
+            "expression": "postponementReason.empty() or serviceCategory.coding.where(code = '27' or code = '30').exists()"
           },
           {
             "key": "serviceCategory-location-type",
-            "human": "If serviceCategory is 7 and virtualService is not present, every contained Location must have type PTRES or OF. If serviceCategory is 27 or 30, every contained Location must have type HU or HOSP, and at least one HU and one HOSP Location must be present.",
+            "human": "For serviceCategory 27 or 30, every contained Location must have type HU or HOSP, and at least one HU and one HOSP Location must be present.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "(serviceCategory.coding.where(code='7').empty() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or contained.ofType(Location).all(type.coding.where(system='http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code='PTRES' or code='OF')).exists())) and (serviceCategory.coding.where(code='27' or code='30').empty() or (contained.ofType(Location).all(type.coding.where(system='http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code='HU' or code='HOSP')).exists()) and contained.ofType(Location).where(type.coding.where(system='http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code='HU').exists()).exists() and contained.ofType(Location).where(type.coding.where(system='http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code='HOSP').exists()).exists()))"
+            "expression": "serviceCategory.coding.where(code = '27' or code = '30').empty() or (contained.ofType(Location).all(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code = 'HU' or code = 'HOSP')).exists()) and contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'HU').exists()).exists() and contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'HOSP').exists()).exists())"
           },
           {
-            "key": "serviceCategory-7-location-requires-ptres-or-of",
-            "human": "When serviceCategory is 7, the appointment is not partOf another appointment, and virtualService is not present, contained Location must include PTRES or OF.",
+            "key": "community-services-location-requires-ptres-or-of",
+            "human": "When serviceCategory is 3, 4, 5, 6, 7, 8, 9, 10, 16, 17, 18 or 19, the appointment is not partOf another appointment, and virtualService is not present, contained Location must include PTRES or OF.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or partOf.exists() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code = 'PTRES' or code = 'OF')).exists()).exists()"
+            "expression": "serviceCategory.coding.where(code in ('3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '16' | '17' | '18' | '19')).empty() or partOf.exists() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code = 'PTRES' or code = 'OF')).exists()).exists()"
           },
           {
-            "key": "serviceCategory-7-location-not-both-ptres-and-of",
-            "human": "When serviceCategory is 7, the appointment is not partOf another appointment, and virtualService is not present, contained Location must not include both PTRES and OF.",
+            "key": "community-services-location-not-both-ptres-and-of",
+            "human": "When serviceCategory is 3, 4, 5, 6, 7, 8, 9, 10, 16, 17, 18 or 19, the appointment is not partOf another appointment, and virtualService is not present, contained Location must not include both PTRES and OF.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or partOf.exists() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or (contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'PTRES').exists()).exists() and contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'OF').exists()).exists()).not()"
+            "expression": "serviceCategory.coding.where(code in ('3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '16' | '17' | '18' | '19')).empty() or partOf.exists() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or (contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'PTRES').exists()).exists() and contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'OF').exists()).exists()).not()"
           },
           {
-            "key": "serviceCategory-7-contained-flag-rules",
-            "human": "When serviceCategory is 7, contained Flag resources must not use the codes canAcknowledge, canChangeAppointmentDialog, canHaveAppointmentDetails, or canInitiateDialog.",
+            "key": "community-services-no-dialog-flags",
+            "human": "For community health services (3, 4, 5, 6, 7, 8, 9, 10, 16, 17, 18, and 19), contained Flag resources must not use the codes canAcknowledge, canChangeAppointmentDialog, canHaveAppointmentDetails, or canInitiateDialog.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or contained.ofType(Flag).all(code.coding.where(code in ('canAcknowledge' | 'canChangeAppointmentDialog' | 'canHaveAppointmentDetails' | 'canInitiateDialog')).empty())"
+            "expression": "serviceCategory.coding.where(code in ('3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '16' | '17' | '18' | '19')).empty() or contained.ofType(Flag).all(code.coding.where(code in ('canAcknowledge' | 'canChangeAppointmentDialog' | 'canHaveAppointmentDetails' | 'canInitiateDialog')).empty())"
           },
           {
             "key": "contained-flag-allowed-codes",
@@ -111,11 +139,11 @@
             "expression": "contained.ofType(Flag).code.coding.all(code in ('canAcknowledge' | 'canChangeAppointmentDialog' | 'canHaveAppointmentDetails' | 'canInitiateDialog' | 'cancel' | 'cancelWithComment' | 'canCancelServiceRequest' | 'canChangeAppointment')) and contained.ofType(Flag).code.coding.where(code = 'canAcknowledge').count() <= 1 and contained.ofType(Flag).code.coding.where(code = 'canChangeAppointmentDialog').count() <= 1 and contained.ofType(Flag).code.coding.where(code = 'canHaveAppointmentDetails').count() <= 1 and contained.ofType(Flag).code.coding.where(code = 'canInitiateDialog').count() <= 1 and contained.ofType(Flag).code.coding.where(code = 'cancel').count() <= 1 and contained.ofType(Flag).code.coding.where(code = 'cancelWithComment').count() <= 1 and contained.ofType(Flag).code.coding.where(code = 'canCancelServiceRequest').count() <= 1 and contained.ofType(Flag).code.coding.where(code = 'canChangeAppointment').count() <= 1"
           },
           {
-            "key": "serviceCategory-7-no-varsling-or-paminnelse",
-            "human": "When serviceCategory is 7, meta.tag varsling and paminnelse must not be used.",
+            "key": "serviceCategory-7-ptres-no-varsling-or-paminnelse",
+            "human": "When serviceCategory is 7 and a contained Location has type PTRES, meta.tag varsling and paminnelse must not be used.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or meta.tag.where(system = 'http://helsenorge.no/fhir/varsling' or system = 'http://helsenorge.no/fhir/paminnelse').empty()"
+            "expression": "serviceCategory.coding.where(code = '7').empty() or contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'PTRES').exists()).empty() or meta.tag.where(system = 'http://helsenorge.no/fhir/varsling' or system = 'http://helsenorge.no/fhir/paminnelse').empty()"
           },
           {
             "key": "supportinginformation-organization-partof",
@@ -125,11 +153,11 @@
             "expression": "supportingInformation.resolve().ofType(Organization).where(meta.profile != 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization').all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.102').exists() and partOf.exists() and partOf.resolve().ofType(Organization).exists() and partOf.resolve().ofType(Organization).all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.101').exists()))"
           },
           {
-            "key": "serviceCategory-7-requires-kommunikasjonspart-organization",
-            "human": "When serviceCategory is 7, supportingInformation[kommunikasjonspart] must reference an Organization using HER-id level 2 identifier system.",
+            "key": "community-services-requires-kommunikasjonspart-organization",
+            "human": "For all serviceCategory values except 27 and 30, supportingInformation[kommunikasjonspart] must reference an Organization using a HER-id level 2 identifier system.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '7').empty() or supportingInformation.resolve().ofType(Organization).where(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.102').exists()).exists()"
+            "expression": "serviceCategory.coding.where(code = '27' or code = '30').exists() or supportingInformation.resolve().ofType(Organization).where(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.102').exists()).exists()"
           },
           {
             "key": "virtualservice-or-location-required",
@@ -151,6 +179,27 @@
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
             "expression": "status != 'entered-in-error' or (start.exists() and end.exists())"
+          },
+          {
+            "key": "inv-a",
+            "human": "Only urn:oid:2.16.578.1.12.4.1.4.1 (FNR) or urn:oid:2.16.578.1.12.4.1.4.2 (DNR) are allowed as systems to identify patient in this profile.",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "system = 'urn:oid:2.16.578.1.12.4.1.4.1' or system = 'urn:oid:2.16.578.1.12.4.1.4.2'"
+          },
+          {
+            "key": "hn-app-specialist-cancellation-reason",
+            "human": "Service categories 27 and 30 shall use Norwegian cancellation reason codes",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "serviceCategory.coding.where(code='27' or code='30').exists()\n   implies\n   cancellationReason.coding.where(\n     system='urn:oid:2.16.578.1.12.4.1.1.8445'\n     or\n     system='urn:oid:2.16.578.1.12.4.1.1.9179'\n   ).exists()"
+          },
+          {
+            "key": "hn-app-community-cancellation-reason",
+            "human": "Appointments that are not service category 27 or 30 shall use pat, prov or other as cancellation reason",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "\nserviceCategory.coding.where(code = '27' or code = '30').empty()\nimplies\ncancellationReason.coding.where(\n  system = 'http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason'\n  and (code = 'pat' or code = 'prov' or code = 'other')\n).exists()\n"
           }
         ]
       },
@@ -406,7 +455,7 @@
       {
         "id": "Appointment.cancelationReason",
         "path": "Appointment.cancelationReason",
-        "short": "Reason for cancelation",
+        "short": "Reason for cancellation",
         "definition": "Volven 8445 is a preferred code system but other code systems as Volven 9179 can also be used",
         "binding": {
           "strength": "required",

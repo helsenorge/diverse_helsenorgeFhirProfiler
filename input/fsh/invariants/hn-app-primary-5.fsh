@@ -1,4 +1,4 @@
 Invariant: hn-app-primary-5
-Description: "postponementReason cannot be used when serviceCategory is 7"
+Description: "postponementReason is only allowed when serviceCategory is 27 or 30"
 * severity = #error
-* expression = "serviceCategory.coding.where(code = '7').empty() or postponementReason.empty()"
+* expression = "postponementReason.empty() or serviceCategory.coding.where(code = '27' or code = '30').exists()"

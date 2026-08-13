@@ -5,7 +5,32 @@ Title: "hn-basis-appointment"
 Description: "Base profile for Helsenorge Appointment information. Defined by Helsenorge based on national profile."
 * ^version = "2.5.4"
 * ^status = #draft
-* obeys cancelationReason-inv and contained-location-must-have-managingorganization and hn-app-primary-2 and start-required-inv and hn-app-reqperiod-1 and hn-app-reqperiod-2 and hn-app-primary-4 and hn-app-primary-5 and serviceCategory-location-type and serviceCategory-7-location-requires-ptres-or-of and serviceCategory-7-location-not-both-ptres-and-of and serviceCategory-7-contained-flag-rules and contained-flag-allowed-codes and serviceCategory-7-no-varsling-or-paminnelse and supportinginformation-organization-partof and serviceCategory-7-requires-kommunikasjonspart-organization and virtualservice-or-location-required and hn-app-proposed-only-servicecategory-7 and hn-app-entered-in-error-requires-start-and-end
+* obeys appointment-participant-actor-patient-reference-identifier and
+    appointment-participant-actor-patient-reference-reference and
+    inv-3 and
+    must-be-max-1000-chars and
+    cancellationReason-inv and
+    contained-location-must-have-managingorganization and
+    hn-app-primary-2 and
+    start-required-inv and
+    hn-app-reqperiod-1 and
+    hn-app-reqperiod-2 and
+    hn-app-primary-4 and
+    hn-app-primary-5 and
+    serviceCategory-location-type and
+    community-services-location-requires-ptres-or-of and
+    community-services-location-not-both-ptres-and-of and
+    community-services-no-dialog-flags and
+    contained-flag-allowed-codes and
+    serviceCategory-7-ptres-no-varsling-or-paminnelse and
+    supportinginformation-organization-partof and
+    community-services-requires-kommunikasjonspart-organization and
+    virtualservice-or-location-required and
+    hn-app-proposed-only-servicecategory-7 and
+    hn-app-entered-in-error-requires-start-and-end and
+    inv-a and
+    hn-app-specialist-cancellation-reason and
+    hn-app-community-cancellation-reason
 * meta ^short = "Metadata used for Appointment in Helsenorge"
 * meta ^definition = "Appointment-specific use of generic Helsenorge FHIR metadata. See generic description of metadata mechanisms: <https://helsenorge.atlassian.net/wiki/spaces/HELSENORGE/pages/743014401/Meta+informasjon+som+kan+benyttes+for+alle+FHIR+ressurser>. This profile constrains selected metadata elements relevant for Appointment, including conditional access restriction, notification handling, and reminder handling."
 * meta.lastUpdated 1.. MS
@@ -57,7 +82,7 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * identifier.assigner only Reference(Organization or NoBasisOrganization)
 * status from $hn-appointment-status-vs (required)
 * cancelationReason from HnCancellationReasonVS (required)
-* cancelationReason ^short = "Reason for cancelation"
+* cancelationReason ^short = "Reason for cancellation"
 * cancelationReason ^definition = "Volven 8445 is a preferred code system but other code systems as Volven 9179 can also be used"
 * cancelationReason.coding obeys inv-4
 * serviceCategory 1..1
