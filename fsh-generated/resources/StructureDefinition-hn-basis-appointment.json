@@ -20,32 +20,11 @@
         "path": "Appointment",
         "constraint": [
           {
-            "key": "appointment-participant-actor-patient-reference-identifier",
-            "human": "When actor is a Patient logical reference MUST be used",
-            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
-            "severity": "warning",
-            "expression": "actor.type = 'Patient' implies actor.identifier.exists()"
-          },
-          {
-            "key": "appointment-participant-actor-patient-reference-reference",
-            "human": "When actor is a Patient, literal reference (relative, internal or absolute) MUST not be used",
-            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
-            "severity": "warning",
-            "expression": "(actor.type = 'Patient') implies actor.reference.exists().not()"
-          },
-          {
             "key": "inv-3",
             "human": "Only FNR or DNR number are allowed as codes to identify patient in this profile.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
             "expression": "code = 'FNR' or code = 'DNR'"
-          },
-          {
-            "key": "must-be-max-1000-chars",
-            "human": "Length MUST be <= 1000",
-            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
-            "severity": "error",
-            "expression": "$this.length() <= 1000"
           },
           {
             "key": "cancellationReason-inv",
@@ -196,10 +175,10 @@
           },
           {
             "key": "hn-app-community-cancellation-reason",
-            "human": "Appointments that are not service category 27 or 30 shall use pat, prov or other as cancellation reason",
-            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "\nserviceCategory.coding.where(code = '27' or code = '30').empty()\nimplies\ncancellationReason.coding.where(\n  system = 'http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason'\n  and (code = 'pat' or code = 'prov' or code = 'other')\n).exists()\n"
+            "human": "Cancelled appointments that are not service category 27 or 30 shall use pat, prov or other as cancellation reason.",
+            "expression": "\n(status = 'cancelled'\n and partOf.empty()\n and serviceCategory.coding.where(code = '27' or code = '30').empty())\nimplies\ncancelationReason.coding.where(\n  system = 'http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason'\n  and (\n    code = 'pat'\n    or code = 'prov'\n    or code = 'other'\n  )\n).exists()\n",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment"
           }
         ]
       },

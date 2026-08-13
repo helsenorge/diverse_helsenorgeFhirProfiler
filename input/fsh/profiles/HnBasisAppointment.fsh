@@ -5,10 +5,7 @@ Title: "hn-basis-appointment"
 Description: "Base profile for Helsenorge Appointment information. Defined by Helsenorge based on national profile."
 * ^version = "2.5.4"
 * ^status = #draft
-* obeys appointment-participant-actor-patient-reference-identifier and
-    appointment-participant-actor-patient-reference-reference and
-    inv-3 and
-    must-be-max-1000-chars and
+* obeys inv-3 and
     cancellationReason-inv and
     contained-location-must-have-managingorganization and
     hn-app-primary-2 and
