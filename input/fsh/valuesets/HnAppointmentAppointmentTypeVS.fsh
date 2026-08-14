@@ -2,7 +2,7 @@ ValueSet: HnAppointmentAppointmentTypeVS
 Id: hn-appointment-AppointmentType-code-vs
 Title: "hn-appointment-AppointmentType-code-vs"
 Description: "Value set for AppointmentType codes in nytimeløsing that includes set of codes from diferent code systems"
-* ^status = #draft
+* ^status = #active
 * ^version = "1.0.1"
 * urn:oid:2.16.578.1.12.4.1.1.7617#Hjemmebesok "Hjemmebesøk"
 * include codes from system NoKodeverk8406

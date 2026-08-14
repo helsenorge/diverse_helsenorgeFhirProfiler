@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "HnAppointmentFlagCodeVS",
   "id": "hn-appointment-flag-code-vs",
   "title": "hn-appointment-flag-code-vs",
