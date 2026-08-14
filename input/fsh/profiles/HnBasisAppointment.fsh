@@ -89,10 +89,9 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * specialty.coding obeys inv-4
 * appointmentType 1..
 * appointmentType.coding obeys inv-4
-* appointmentType.coding contains helsenorge 0..1 MS
-* appointmentType.coding[helsenorge] from HnAppointmentAppointmentTypeVS (required)
-* appointmentType.coding[helsenorge] ^short = "Codes from value set"
-* appointmentType.coding[helsenorge] ^definition = "Codes from value set"
+* appointmentType.coding[omsorgsNiva] from HnAppointmentAppointmentTypeVS (required)
+* appointmentType.coding[omsorgsNiva] ^short = "Codes from value set"
+* appointmentType.coding[omsorgsNiva] ^definition = "Codes from value set"
 * reasonCode ..0
 * reasonReference ..0
 * priority ..0
