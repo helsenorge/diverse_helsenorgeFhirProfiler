@@ -3,10 +3,9 @@ Parent: NoBasisAppointment
 Id: hn-basis-appointment
 Title: "hn-basis-appointment"
 Description: "Base profile for Helsenorge Appointment information. Defined by Helsenorge based on national profile."
-* ^version = "2.5.4"
-* ^status = #draft
-* obeys inv-3 and
-    cancellationReason-inv and
+* ^version = "2.5.5"
+* ^status = #active
+* obeys cancellationReason-inv and
     contained-location-must-have-managingorganization and
     hn-app-primary-2 and
     start-required-inv and
@@ -25,7 +24,6 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
     virtualservice-or-location-required and
     hn-app-proposed-only-servicecategory-7 and
     hn-app-entered-in-error-requires-start-and-end and
-    inv-a and
     hn-app-specialist-cancellation-reason and
     hn-app-community-cancellation-reason
 * meta ^short = "Metadata used for Appointment in Helsenorge"

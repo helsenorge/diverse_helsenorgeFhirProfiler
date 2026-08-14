@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "HnBetingetTilgangsbegrensningVS",
   "id": "hn-tilgangsbegrensning-vs",
   "title": "Helsenorge tilgangsbegrensning ValueSet",

@@ -2,10 +2,10 @@
   "resourceType": "StructureDefinition",
   "id": "hn-basis-appointment",
   "url": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "name": "HnBasisAppointment",
   "title": "hn-basis-appointment",
-  "status": "draft",
+  "status": "active",
   "description": "Base profile for Helsenorge Appointment information. Defined by Helsenorge based on national profile.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -19,13 +19,6 @@
         "id": "Appointment",
         "path": "Appointment",
         "constraint": [
-          {
-            "key": "inv-3",
-            "human": "Only FNR or DNR number are allowed as codes to identify patient in this profile.",
-            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
-            "severity": "error",
-            "expression": "code = 'FNR' or code = 'DNR'"
-          },
           {
             "key": "cancellationReason-inv",
             "human": "Cancellation reason MUST be set when status=cancelled and the appointment is not partOf another appointment",
@@ -158,13 +151,6 @@
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
             "expression": "status != 'entered-in-error' or (start.exists() and end.exists())"
-          },
-          {
-            "key": "inv-a",
-            "human": "Only urn:oid:2.16.578.1.12.4.1.4.1 (FNR) or urn:oid:2.16.578.1.12.4.1.4.2 (DNR) are allowed as systems to identify patient in this profile.",
-            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
-            "severity": "error",
-            "expression": "system = 'urn:oid:2.16.578.1.12.4.1.4.1' or system = 'urn:oid:2.16.578.1.12.4.1.4.2'"
           },
           {
             "key": "hn-app-specialist-cancellation-reason",

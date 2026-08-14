@@ -2,8 +2,8 @@ ValueSet: HnAppointmentServiceCategoryVS
 Id: hn-appointment-ServiceCategory-code-vs
 Title: "hn-appointment-ServiceCategory-code-vs"
 Description: "Value set for ServiceCategory codes in nytimeløsing"
-* ^status = #draft
-* ^version = "1.0.2"
+* ^status = #active
+* ^version = "1.0.3"
 * ^experimental = true
 * ^date = "2026-08-12T09:13:52+00:00"
 * ^publisher = "Example Publisher"

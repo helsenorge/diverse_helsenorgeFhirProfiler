@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "HnPaminnelseVS",
   "id": "hn-paminnelse-vs",
   "title": "Helsenorge påminnelse metatag value set",
