@@ -17,18 +17,6 @@
       "display": "Hastetime"
     },
     {
-      "code": "Video",
-      "display": "Videotime"
-    },
-    {
-      "code": "Tidsvindu",
-      "display": "Tidsvindu"
-    },
-    {
-      "code": "Gruppe",
-      "display": "Gruppetime"
-    },
-    {
       "code": "Vaksine",
       "display": "Time for vaksine"
     },
@@ -37,12 +25,24 @@
       "display": "Time på lab"
     },
     {
-      "code": "Koronatest",
-      "display": "Innført for håndtering av pandemien"
+      "code": "Hjemmebesok",
+      "display": "Hjemmebesøk"
     },
     {
-      "code": "Koronavaksine",
-      "display": "Innført for håndtering av pandemien"
+      "code": "Dagbehandling",
+      "display": "Dagbehandling"
+    },
+    {
+      "code": "Innleggelse",
+      "display": "Innleggelse"
+    },
+    {
+      "code": "Konsultasjon",
+      "display": "Konsultasjon"
+    },
+    {
+      "code": "Poliklinisk",
+      "display": "Poliklinisk time"
     }
   ],
   "identifier": [
