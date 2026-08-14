@@ -521,8 +521,21 @@
         "id": "Appointment.appointmentType.coding:omsorgsNiva",
         "path": "Appointment.appointmentType.coding",
         "sliceName": "omsorgsNiva",
-        "short": "Codes from value set",
-        "definition": "Codes from value set",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-AppointmentType-code-vs"
+        }
+      },
+      {
+        "id": "Appointment.appointmentType.coding:kontaktType",
+        "path": "Appointment.appointmentType.coding",
+        "sliceName": "kontaktType",
+        "max": "0"
+      },
+      {
+        "id": "Appointment.appointmentType.coding:innbygger",
+        "path": "Appointment.appointmentType.coding",
+        "sliceName": "innbygger",
         "binding": {
           "strength": "required",
           "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-AppointmentType-code-vs"

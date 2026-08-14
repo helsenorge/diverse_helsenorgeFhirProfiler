@@ -90,8 +90,8 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * appointmentType 1..
 * appointmentType.coding obeys inv-4
 * appointmentType.coding[omsorgsNiva] from HnAppointmentAppointmentTypeVS (required)
-* appointmentType.coding[omsorgsNiva] ^short = "Codes from value set"
-* appointmentType.coding[omsorgsNiva] ^definition = "Codes from value set"
+* appointmentType.coding[innbygger] from HnAppointmentAppointmentTypeVS (required)
+* appointmentType.coding[kontaktType] ..0
 * reasonCode ..0
 * reasonReference ..0
 * priority ..0
