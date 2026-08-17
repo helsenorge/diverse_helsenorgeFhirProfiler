@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HnAppointmentTypeOmsorgsNivaVS",
+  "id": "hn-appointment-type-omsorgsniva-vs",
+  "title": "hn-appointment-type-omsorgsniva-vs",
+  "description": "Value set for ServiceCategory codes in nytimeløsing",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-omsorgsniva-vs",
+  "version": "1.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.578.1.12.4.1.1.8406"
+      },
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/Hn-AppointmentTypeProposed-New-Codes-cs"
+      }
+    ]
+  }
+}

@@ -523,7 +523,7 @@
         "sliceName": "omsorgsNiva",
         "binding": {
           "strength": "required",
-          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-AppointmentType-code-vs"
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-omsorgsniva-vs"
         }
       },
       {
@@ -538,7 +538,7 @@
         "sliceName": "innbygger",
         "binding": {
           "strength": "required",
-          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-AppointmentType-code-vs"
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-inbygger-vs"
         }
       },
       {
