@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HnAppointmentTypeInnbyggerVS",
+  "id": "hn-appointment-type-inbygger-vs",
+  "title": "hn-appointment-type-inbygger-vs",
+  "description": "Value set for AppointmentType codes in nytimeløsing that includes set of codes from diferent code systems",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-inbygger-vs",
+  "version": "1.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-7617.codesystem"
+      }
+    ]
+  }
+}

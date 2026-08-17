@@ -2,7 +2,8 @@ Name                                                        Type        File
 AdditionalCode                                              Extension   extensions\AdditionalCode.fsh
 BusinessStatusExtension                                     Extension   extensions\BusinessStatusExtension.fsh
 CS8116DnrFnrVS                                              ValueSet    valuesets\CS8116DnrFnrVS.fsh
-HnAppointmentAppointmentTypeVS                              ValueSet    valuesets\HnAppointmentAppointmentTypeVS.fsh
+HnAppointmentTypeInnbyggerVS                                ValueSet    valuesets\HnAppointmentTypeInnbyggerVS.fsh
+HnAppointmentTypeOmsorgsNivaVS                              ValueSet    valuesets\HnAppointmentTypeOmsorgsNivaVS.fsh
 HnAppointmentFlagCodeCS                                     CodeSystem  codesystems\HnAppointmentFlagCodeCS.fsh
 HnAppointmentFlagCodeVS                                     ValueSet    valuesets\HnAppointmentFlagCodeVS.fsh
 HnAppointmentServiceCategoryVS                              ValueSet    valuesets\HnAppointmentServiceCategoryVS.fsh

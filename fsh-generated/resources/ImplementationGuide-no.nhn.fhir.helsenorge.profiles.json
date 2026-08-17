@@ -514,14 +514,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/hn-appointment-AppointmentType-code-vs"
-        },
-        "name": "hn-appointment-AppointmentType-code-vs",
-        "description": "Value set for AppointmentType codes in nytimeløsing that includes set of codes from diferent code systems",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/hn-appointment-flag-code-cs"
         },
         "name": "hn-appointment-flag-code-cs",
@@ -541,6 +533,22 @@
           "reference": "ValueSet/hn-appointment-ServiceCategory-code-vs"
         },
         "name": "hn-appointment-ServiceCategory-code-vs",
+        "description": "Value set for ServiceCategory codes in nytimeløsing",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/hn-appointment-type-inbygger-vs"
+        },
+        "name": "hn-appointment-type-inbygger-vs",
+        "description": "Value set for AppointmentType codes in nytimeløsing that includes set of codes from diferent code systems",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/hn-appointment-type-omsorgsniva-vs"
+        },
+        "name": "hn-appointment-type-omsorgsniva-vs",
         "description": "Value set for ServiceCategory codes in nytimeløsing",
         "exampleBoolean": false
       },
