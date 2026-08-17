@@ -1,7 +1,7 @@
 ValueSet: HnAppointmentTypeOmsorgsNivaVS
 Id: hn-appointment-type-omsorgsniva-vs
 Title: "hn-appointment-type-omsorgsniva-vs"
-Description: "Value set for ServiceCategory codes in nytimeløsing"
+Description: "AppointmentType codes from omsorgsnivå code system 8406."
 * ^status = #active
 * ^version = "1.0.0"
 * include codes from system NoKodeverk8406

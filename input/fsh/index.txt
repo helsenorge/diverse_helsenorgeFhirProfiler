@@ -4,6 +4,7 @@ BusinessStatusExtension                                     Extension   extensio
 CS8116DnrFnrVS                                              ValueSet    valuesets\CS8116DnrFnrVS.fsh
 HnAppointmentTypeInnbyggerVS                                ValueSet    valuesets\HnAppointmentTypeInnbyggerVS.fsh
 HnAppointmentTypeOmsorgsNivaVS                              ValueSet    valuesets\HnAppointmentTypeOmsorgsNivaVS.fsh
+HnAppointmentTypeProposedNewCodesVS                         ValueSet    valuesets\HnAppointmentTypeProposedNewCodesVS.fsh
 HnAppointmentFlagCodeCS                                     CodeSystem  codesystems\HnAppointmentFlagCodeCS.fsh
 HnAppointmentFlagCodeVS                                     ValueSet    valuesets\HnAppointmentFlagCodeVS.fsh
 HnAppointmentServiceCategoryVS                              ValueSet    valuesets\HnAppointmentServiceCategoryVS.fsh

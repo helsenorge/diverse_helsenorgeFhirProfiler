@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HnAppointmentTypeProposedNewCodesVS",
+  "id": "hn-appointment-type-proposed-new-codes-vs",
+  "title": "hn-appointment-type-proposed-new-codes-vs",
+  "description": "AppointmentType codes from Helsenorge proposed new codes.",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-proposed-new-codes-vs",
+  "version": "1.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/Hn-AppointmentTypeProposed-New-Codes-cs"
+      }
+    ]
+  }
+}
