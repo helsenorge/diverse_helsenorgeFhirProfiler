@@ -1,4 +1,4 @@
-ValueSet: hnAppointmentStatusVS
+ValueSet: HnAppointmentStatusVS
 Id: hn-appointment-status-vs
 Title: "Helsenorge Appointment Status Value Set"
 Description: "Value set for Helsenorge FHIR appointment status codes."

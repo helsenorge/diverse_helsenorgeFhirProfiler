@@ -1,0 +1,14 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "HnAppointmentTypeKontaktType8432VS",
+  "id": "hn-appointmentType-kontakt-8432-vs",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8432",
+  "compose": {
+    "include": [
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8432.codesystem"
+      }
+    ]
+  }
+}
