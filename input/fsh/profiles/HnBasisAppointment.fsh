@@ -87,17 +87,20 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * serviceType.coding obeys inv-4
 * specialty ..0
 * specialty.coding obeys inv-4
+* appointmentType.coding ^slicing.discriminator.type = #value
+* appointmentType.coding ^slicing.discriminator.path = "system"
+* appointmentType.coding ^slicing.rules = #open
 * appointmentType 1..1
 * appointmentType.coding obeys inv-4
-* appointmentType.coding[omsorgsNiva] from HnAppointmentTypeOmsorgsNivaVS (required)
-* appointmentType.coding[omsorgsNiva].system 0..1
-* appointmentType.coding[omsorgsNiva].system = "urn:oid:2.16.578.1.12.4.1.1.8406" (exactly)
-* appointmentType.coding[innbygger] from HnAppointmentTypeInnbyggerVS (required)
-* appointmentType.coding[innbygger].system 0..1
-* appointmentType.coding[innbygger].system = "urn:oid:2.16.578.1.12.4.1.1.7617" (exactly)
 * appointmentType.coding contains helsenorge 0..1 MS
+* appointmentType.coding[innbygger] from HnAppointmentTypeInnbyggerVS (required)
+* appointmentType.coding[omsorgsNiva] from HnAppointmentTypeOmsorgsNivaVS (required)
 * appointmentType.coding[helsenorge] from HnAppointmentTypeProposedNewCodesVS (required)
-* appointmentType.coding[helsenorge].system 0..1
+* appointmentType.coding[innbygger].system 1..1
+* appointmentType.coding[innbygger].system = "urn:oid:2.16.578.1.12.4.1.1.7617" (exactly)
+* appointmentType.coding[omsorgsNiva].system 1..1
+* appointmentType.coding[omsorgsNiva].system = "urn:oid:2.16.578.1.12.4.1.1.8406" (exactly)
+* appointmentType.coding[helsenorge].system 1..1
 * appointmentType.coding[helsenorge].system = "http://helsenorge.no/fhir/CodeSystem/Hn-AppointmentTypeProposed-New-Codes-cs" (exactly)
 * appointmentType.coding[kontaktType] 0..0
 * reasonCode ..0

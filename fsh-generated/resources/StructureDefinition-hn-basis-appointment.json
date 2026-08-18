@@ -507,6 +507,15 @@
       {
         "id": "Appointment.appointmentType.coding",
         "path": "Appointment.appointmentType.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
         "constraint": [
           {
             "key": "inv-4",
@@ -529,6 +538,7 @@
       {
         "id": "Appointment.appointmentType.coding:omsorgsNiva.system",
         "path": "Appointment.appointmentType.coding.system",
+        "min": 1,
         "fixedUri": "urn:oid:2.16.578.1.12.4.1.1.8406"
       },
       {
@@ -549,6 +559,7 @@
       {
         "id": "Appointment.appointmentType.coding:innbygger.system",
         "path": "Appointment.appointmentType.coding.system",
+        "min": 1,
         "fixedUri": "urn:oid:2.16.578.1.12.4.1.1.7617"
       },
       {
@@ -566,6 +577,7 @@
       {
         "id": "Appointment.appointmentType.coding:helsenorge.system",
         "path": "Appointment.appointmentType.coding.system",
+        "min": 1,
         "fixedUri": "http://helsenorge.no/fhir/CodeSystem/Hn-AppointmentTypeProposed-New-Codes-cs"
       },
       {
