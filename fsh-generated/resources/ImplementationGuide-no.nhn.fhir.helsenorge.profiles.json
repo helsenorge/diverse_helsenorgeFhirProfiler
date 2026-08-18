@@ -541,7 +541,7 @@
           "reference": "ValueSet/hn-appointment-type-inbygger-vs"
         },
         "name": "hn-appointment-type-inbygger-vs",
-        "description": "Value set for AppointmentType codes in nytimeløsing that includes set of codes from diferent code systems",
+        "description": "AppointmentType codes from innbygger code system 7617.",
         "exampleBoolean": false
       },
       {
@@ -549,7 +549,15 @@
           "reference": "ValueSet/hn-appointment-type-omsorgsniva-vs"
         },
         "name": "hn-appointment-type-omsorgsniva-vs",
-        "description": "Value set for ServiceCategory codes in nytimeløsing",
+        "description": "AppointmentType codes from omsorgsnivå code system 8406.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/hn-appointment-type-proposed-new-codes-vs"
+        },
+        "name": "hn-appointment-type-proposed-new-codes-vs",
+        "description": "AppointmentType codes from Helsenorge proposed new codes.",
         "exampleBoolean": false
       },
       {

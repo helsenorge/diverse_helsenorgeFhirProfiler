@@ -4,7 +4,7 @@
   "name": "HnAppointmentTypeOmsorgsNivaVS",
   "id": "hn-appointment-type-omsorgsniva-vs",
   "title": "hn-appointment-type-omsorgsniva-vs",
-  "description": "Value set for ServiceCategory codes in nytimeløsing",
+  "description": "AppointmentType codes from omsorgsnivå code system 8406.",
   "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-omsorgsniva-vs",
   "version": "1.0.0",
   "compose": {

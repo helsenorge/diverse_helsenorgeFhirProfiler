@@ -4,7 +4,7 @@
   "name": "HnAppointmentTypeInnbyggerVS",
   "id": "hn-appointment-type-inbygger-vs",
   "title": "hn-appointment-type-inbygger-vs",
-  "description": "Value set for AppointmentType codes in nytimeløsing that includes set of codes from diferent code systems",
+  "description": "AppointmentType codes from innbygger code system 7617.",
   "url": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-inbygger-vs",
   "version": "1.0.0",
   "compose": {
