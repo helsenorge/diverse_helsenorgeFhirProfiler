@@ -1,5 +1,5 @@
-ValueSet: HnCancellationReasonVS
-Id: hn-cancellation-reason-vs
+ValueSet: HnCancelationReasonVS
+Id: hn-cancelation-reason-vs
 Title: "Helsenorge Cancellation Reason Value Set"
 * ^status = #active
 * ^version = "1.0.0"

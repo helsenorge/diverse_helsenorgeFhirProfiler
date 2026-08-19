@@ -5,7 +5,7 @@ Title: "hn-basis-appointment"
 Description: "Base profile for Helsenorge Appointment information. Defined by Helsenorge based on national profile."
 * ^version = "2.5.5"
 * ^status = #active
-* obeys cancellationReason-inv and
+* obeys cancelationReason-inv and
     contained-location-must-have-managingorganization and
     hn-app-primary-2 and
     start-required-inv and
@@ -24,8 +24,8 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
     virtualservice-or-location-required and
     hn-app-proposed-only-servicecategory-7 and
     hn-app-entered-in-error-requires-start-and-end and
-    hn-app-specialist-cancellation-reason and
-    hn-app-community-cancellation-reason
+    hn-app-specialist-cancelation-reason and
+    hn-app-community-cancelation-reason
 * meta ^short = "Metadata used for Appointment in Helsenorge"
 * meta ^definition = "Appointment-specific use of generic Helsenorge FHIR metadata. See generic description of metadata mechanisms: <https://helsenorge.atlassian.net/wiki/spaces/HELSENORGE/pages/743014401/Meta+informasjon+som+kan+benyttes+for+alle+FHIR+ressurser>. This profile constrains selected metadata elements relevant for Appointment, including conditional access restriction, notification handling, and reminder handling."
 * meta.lastUpdated 1.. MS
@@ -76,7 +76,7 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * identifier.assigner 1..
 * identifier.assigner only Reference(Organization or NoBasisOrganization)
 * status from $hn-appointment-status-vs (required)
-* cancelationReason from HnCancellationReasonVS (required)
+* cancelationReason from HnCancelationReasonVS (required)
 * cancelationReason ^short = "Reason for cancellation"
 * cancelationReason ^definition = "Volven 8445 is a preferred code system but other code systems as Volven 9179 can also be used"
 * cancelationReason.coding obeys inv-4

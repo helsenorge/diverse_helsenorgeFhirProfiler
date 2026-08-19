@@ -461,7 +461,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/hn-cancellation-reason-vs"
+          "reference": "ValueSet/hn-cancelation-reason-vs"
         },
         "name": "Helsenorge Cancellation Reason Value Set",
         "exampleBoolean": false
