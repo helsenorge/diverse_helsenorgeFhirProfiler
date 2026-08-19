@@ -368,6 +368,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/no-kodeverk-7621.codesystem"
+        },
+        "name": "Avlysningskoder",
+        "description": "Avlysningskoder i primærhelsetjenesten",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/businessStatus"
         },
         "name": "Business status of a request - including referals",
@@ -630,6 +638,13 @@
         },
         "name": "hn-scheduleandslot-type-vs",
         "description": "Value set for schedule and slot type",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/hn-appointmentType-kontakt-8432-vs"
+        },
+        "name": "HnAppointmentTypeKontaktType8432VS",
         "exampleBoolean": false
       },
       {
