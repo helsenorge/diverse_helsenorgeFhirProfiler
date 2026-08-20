@@ -530,7 +530,10 @@
         "id": "Appointment.appointmentType.coding:kontaktType",
         "path": "Appointment.appointmentType.coding",
         "sliceName": "kontaktType",
-        "max": "0"
+        "binding": {
+          "strength": "required",
+          "valueSet": "urn:oid:2.16.578.1.12.4.1.1.8432"
+        }
       },
       {
         "id": "Appointment.appointmentType.coding:innbygger",
