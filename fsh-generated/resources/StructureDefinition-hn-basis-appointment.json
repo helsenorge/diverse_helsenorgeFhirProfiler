@@ -20,11 +20,11 @@
         "path": "Appointment",
         "constraint": [
           {
-            "key": "cancellationReason-inv",
+            "key": "cancelationReason-inv",
             "human": "Cancellation reason MUST be set when status=cancelled and the appointment is not partOf another appointment",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "(status = 'cancelled' and partOf.empty()) implies cancellationReason.exists()"
+            "expression": "(status = 'cancelled' and partOf.empty()) implies cancelationReason.exists()"
           },
           {
             "key": "contained-location-must-have-managingorganization",
@@ -84,10 +84,10 @@
           },
           {
             "key": "community-services-location-requires-ptres-or-of",
-            "human": "When serviceCategory is 3, 4, 5, 6, 7, 8, 9, 10, 16, 17, 18 or 19, the appointment is not partOf another appointment, and virtualService is not present, contained Location must include PTRES or OF.",
+            "human": "For community services, contained Location must include PTRES or OF when virtualService is not present.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code in ('3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '16' | '17' | '18' | '19')).empty() or partOf.exists() or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and (code = 'PTRES' or code = 'OF')).exists()).exists()"
+            "expression": "serviceCategory.coding.where(\n  code = '3' or\n  code = '4' or\n  code = '5' or\n  code = '6' or\n  code = '7' or\n  code = '8' or\n  code = '9' or\n  code = '10' or\n  code = '16' or\n  code = '17' or\n  code = '18' or\n  code = '19'\n).empty()\nor partOf.exists()\nor extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists()\nor contained.ofType(Location).where(\n     type.coding.where(\n       system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode'\n       and (code = 'PTRES' or code = 'OF')\n     ).exists()\n   ).exists()"
           },
           {
             "key": "community-services-location-not-both-ptres-and-of",
@@ -153,17 +153,17 @@
             "expression": "status != 'entered-in-error' or (start.exists() and end.exists())"
           },
           {
-            "key": "hn-app-specialist-cancellation-reason",
+            "key": "hn-app-specialist-cancelation-reason",
             "human": "Service categories 27 and 30 shall use Norwegian cancellation reason codes",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code='27' or code='30').exists()\n   implies\n   cancellationReason.coding.where(\n     system='urn:oid:2.16.578.1.12.4.1.1.8445'\n     or\n     system='urn:oid:2.16.578.1.12.4.1.1.9179'\n   ).exists()"
+            "expression": "(serviceCategory.coding.where(code='27' or code='30').exists()\n  and status = 'cancelled'\n  and partOf.empty())\n   implies\n   cancelationReason.coding.where(\n     system='urn:oid:2.16.578.1.12.4.1.1.8445'\n     or\n     system='urn:oid:2.16.578.1.12.4.1.1.9179'\n   ).exists()"
           },
           {
-            "key": "hn-app-community-cancellation-reason",
+            "key": "hn-app-community-cancelation-reason",
             "severity": "error",
-            "human": "Cancelled appointments that are not service category 27 or 30 shall use pat, prov or other as cancellation reason.",
-            "expression": "\n(status = 'cancelled'\n and partOf.empty()\n and serviceCategory.coding.where(code = '27' or code = '30').empty())\nimplies\ncancelationReason.coding.where(\n  system = 'http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason'\n  and (\n    code = 'pat'\n    or code = 'prov'\n    or code = 'other'\n  )\n).exists()\n",
+            "human": "Cancelled appointments that are not service category 27 or 30 shall use a cancellation reason from code system 7621.",
+            "expression": "\n(status = 'cancelled'\n and partOf.empty()\n and serviceCategory.coding.where(code = '27' or code = '30').empty())\nimplies\ncancelationReason.coding.where(\n  system = 'urn:oid:2.16.578.1.12.4.1.1.7621'\n).exists()\n",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment"
           }
         ]
@@ -424,7 +424,7 @@
         "definition": "Volven 8445 is a preferred code system but other code systems as Volven 9179 can also be used",
         "binding": {
           "strength": "required",
-          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-cancellation-reason-vs"
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-cancelation-reason-vs"
         }
       },
       {
