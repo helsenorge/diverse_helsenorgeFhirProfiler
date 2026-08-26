@@ -13,20 +13,12 @@
       "display": "Avlyst av tjeneste"
     },
     {
-      "code": "AIH",
-      "display": "Avlyst - ikke hjemme"
-    },
-    {
       "code": "AAI",
       "display": "Avlyst av innbygger"
     },
     {
       "code": "APVAI",
       "display": "Avlyst på vegne av innbygger"
-    },
-    {
-      "code": "IM",
-      "display": "Ikke møtt"
     }
   ],
   "identifier": [
@@ -50,5 +42,5 @@
     }
   ],
   "caseSensitive": true,
-  "count": 5
+  "count": 3
 }

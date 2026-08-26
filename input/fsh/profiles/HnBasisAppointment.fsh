@@ -5,7 +5,8 @@ Title: "hn-basis-appointment"
 Description: "Base profile for Helsenorge Appointment information. Defined by Helsenorge based on national profile."
 * ^version = "2.5.5"
 * ^status = #active
-* obeys cancelationReason-inv and
+* obeys hn-app-availability-status and
+    cancelationReason-inv and
     contained-location-must-have-managingorganization and
     hn-app-primary-2 and
     start-required-inv and
@@ -69,7 +70,8 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * extension contains
     HnBasisRecurring named recurring 0..1 MS and
     HnBasisPostponementReason named postponementReason 0..1 and
-    HnBasisConsultationType named consultationType 0..0 MS
+    HnBasisConsultationType named consultationType 0..0 MS and
+    HnAvailabilityStatus named availabilityStatus 0..1 MS
 * identifier 1..1
 * identifier.system 1..
 * identifier.value 1..

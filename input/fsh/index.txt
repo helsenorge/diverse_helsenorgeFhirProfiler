@@ -13,6 +13,7 @@ HnBasisAppointment                                          Profile     profiles
 HnBasisAppointmentResponse                                  Profile     profiles\HnBasisAppointmentResponse.fsh
 HnBasisChangeConferenceType                                 Extension   extensions\HnBasisChangeConferenceType.fsh
 HnBasisConsultationType                                     Extension   extensions\HnBasisConsultationType.fsh
+HnAvailabilityStatus                                        Extension   extensions\HnAvailabilityStatus.fsh
 HnBasisFlag                                                 Profile     profiles\HnBasisFlag.fsh
 HnBasisPostponementReason                                   Extension   extensions\HnBasisPostponementReason.fsh
 HnBasisRecurring                                            Extension   extensions\HnBasisRecurring.fsh
@@ -22,7 +23,7 @@ HnBasisSlot                                                 Profile     profiles
 HnBasisVirtualServiceType                                   ValueSet    valuesets\HnBasisVirtualServiceType.fsh
 HnBetingetTilgangsbegrensningCS                             CodeSystem  codesystems\HnBetingetTilgangsbegrensningCS.fsh
 HnBetingetTilgangsbegrensningVS                             ValueSet    valuesets\HnBetingetTilgangsbegrensningVS.fsh
-HnCancellationReasonVS                                      ValueSet    valuesets\HnCancellationReasonVS.fsh
+HnCancelationReasonVS                                       ValueSet    valuesets\HnCancelationReasonVS.fsh
 HnExtensionFreeSlotPlanningHorizon                          Extension   extensions\HnExtensionFreeSlotPlanningHorizon.fsh
 HnExtensionRepresentant                                     Extension   extensions\HnExtensionRepresentant.fsh
 HnExtensionVarselorganisasjon                               Extension   extensions\HnExtensionVarselorganisasjon.fsh
@@ -81,15 +82,17 @@ NoKodeverk9060                                              CodeSystem  codesyst
 NoKodeverk9148                                              CodeSystem  codesystems\NoKodeverk9148.fsh
 NoKodeverk9603                                              CodeSystem  codesystems\NoKodeverk9603.fsh
 NoKodeverkICD10                                             CodeSystem  codesystems\NoKodeverkICD10.fsh
+HnAvailabilityStatusCS                                      CodeSystem  codesystems\HnAvailabilityStatusCS.fsh
 NoMottattDato                                               Extension   extensions\NoMottattDato.fsh
 NoVurdertDato                                               Extension   extensions\NoVurdertDato.fsh
 ServiceRequestCategoryVS                                    ValueSet    valuesets\ServiceRequestCategoryVS.fsh
 ServiceRequestPerformerTypeVS                               ValueSet    valuesets\ServiceRequestPerformerTypeVS.fsh
+HnAvailabilityStatusVS                                      ValueSet    valuesets\HnAvailabilityStatusVS.fsh
 ServiceRequestStatusReason                                  Extension   extensions\ServiceRequestStatusReason.fsh
 TbaOrganizationcoverage                                     Extension   extensions\TbaOrganizationcoverage.fsh
 appointment-participant-actor-patient-reference-identifier  Invariant   invariants\appointment-participant-actor-patient-reference-identifier.fsh
 appointment-participant-actor-patient-reference-reference   Invariant   invariants\appointment-participant-actor-patient-reference-reference.fsh
-cancellationReason-inv                                      Invariant   invariants\cancellationReason-inv.fsh
+cancelationReason-inv                                       Invariant   invariants\cancelationReason-inv.fsh
 contained-location-must-have-managingorganization           Invariant   invariants\contained-location-must-have-managingorganization.fsh
 hn-app-primary-2                                            Invariant   invariants\hn-app-primary-2.fsh
 hn-app-primary-4                                            Invariant   invariants\hn-app-primary-4.fsh
@@ -123,4 +126,5 @@ community-services-no-dialog-flags                          Invariant   invarian
 serviceCategory-location-type                               Invariant   invariants\serviceCategory-location-type.fsh
 v2                                                          Mapping     mappings\v2.fsh
 virtualservice-or-location-required                         Invariant   invariants\virtualservice-or-location-required.fsh
+hn-app-availability-status                                  Invariannt  invariants\hn-app-availability-status.fsh
 w5                                                          Mapping     mappings\w5.fsh

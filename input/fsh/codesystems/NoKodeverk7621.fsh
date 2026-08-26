@@ -11,9 +11,7 @@ Description: "Avlysningskoder i primærhelsetjenesten"
 * ^jurisdiction = urn:iso:std:iso:3166#NO "Norway"
 * ^caseSensitive = true
 * ^content = #complete
-* ^count = 5
+* ^count = 3
 * #AAT "Avlyst av tjeneste"
-* #AIH "Avlyst - ikke hjemme"
 * #AAI "Avlyst av innbygger"
 * #APVAI "Avlyst på vegne av innbygger"
-* #IM "Ikke møtt"
