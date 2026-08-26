@@ -1,0 +1,20 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "HnAvailabilityStatusCS",
+  "id": "hn-availability-status-cs",
+  "title": "Helsenorge Availability Status",
+  "url": "http://helsenorge.no/fhir/CodeSystem/hn-availability-status-cs",
+  "concept": [
+    {
+      "code": "available",
+      "display": "Available"
+    },
+    {
+      "code": "consumed",
+      "display": "Consumed"
+    }
+  ],
+  "count": 2
+}

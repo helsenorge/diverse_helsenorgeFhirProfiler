@@ -461,6 +461,29 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/hn-availability-status"
+        },
+        "name": "Helsenorge Availability Status",
+        "description": "Indicates whether a proposed appointment is still available for booking.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/hn-availability-status-vs"
+        },
+        "name": "Helsenorge Availability Status",
+        "description": "AvailabilityStatusCodes used for proposed appointments.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/hn-availability-status-cs"
+        },
+        "name": "Helsenorge Availability Status",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/hn-cancelation-reason-vs"
         },
         "name": "Helsenorge Cancellation Reason Value Set",

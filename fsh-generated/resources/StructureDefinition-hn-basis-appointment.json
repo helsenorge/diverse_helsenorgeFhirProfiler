@@ -20,6 +20,13 @@
         "path": "Appointment",
         "constraint": [
           {
+            "key": "hn-app-availability-status",
+            "human": "Proposed appointments with serviceCategory 7 shall have availabilityStatus. All other appointments shall not have availabilityStatus.",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "\n(\n  status = 'proposed' and\n  serviceCategory.coding.code = '7'\n)\n=\nextension('http://helsenorge.no/fhir/StructureDefinition/hn-availability-status').exists()\n"
+          },
+          {
             "key": "cancelationReason-inv",
             "human": "Cancellation reason MUST be set when status=cancelled and the appointment is not partOf another appointment",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
@@ -374,6 +381,22 @@
             "code": "Extension",
             "profile": [
               "http://helsenorge.no/fhir/StructureDefinition/hn-basis-consultationType"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.extension:availabilityStatus",
+        "path": "Appointment.extension",
+        "sliceName": "availabilityStatus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://helsenorge.no/fhir/StructureDefinition/hn-availability-status"
             ]
           }
         ],

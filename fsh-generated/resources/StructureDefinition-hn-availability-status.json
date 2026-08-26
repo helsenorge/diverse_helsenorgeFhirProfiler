@@ -1,0 +1,54 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "hn-availability-status",
+  "url": "http://helsenorge.no/fhir/StructureDefinition/hn-availability-status",
+  "name": "HnAvailabilityStatus",
+  "title": "Helsenorge Availability Status",
+  "status": "draft",
+  "description": "Indicates whether a proposed appointment is still available for booking.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Helsenorge Availability Status",
+        "definition": "Indicates whether a proposed appointment is still available for booking."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://helsenorge.no/fhir/StructureDefinition/hn-availability-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-availability-status-vs"
+        }
+      }
+    ]
+  }
+}

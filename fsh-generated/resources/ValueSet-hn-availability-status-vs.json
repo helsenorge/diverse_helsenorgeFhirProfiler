@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HnAvailabilityStatusVS",
+  "id": "hn-availability-status-vs",
+  "title": "Helsenorge Availability Status",
+  "description": "AvailabilityStatusCodes used for proposed appointments.",
+  "url": "http://helsenorge.no/fhir/ValueSet/hn-availability-status-vs",
+  "version": "1.0.0",
+  "compose": {
+    "include": [
+      {
+        "system": "http://helsenorge.no/fhir/CodeSystem/hn-availability-status-cs"
+      }
+    ]
+  }
+}
