@@ -82,6 +82,9 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * cancelationReason ^short = "Reason for cancellation"
 * cancelationReason ^definition = "Volven 8445 is a preferred code system but other code systems as Volven 9179 can also be used"
 * cancelationReason.coding obeys inv-4
+* cancelationReason.text obeys must-be-max-250-chars
+* cancelationReason.coding 1..1
+* cancelationReason.coding.code 1..1
 * serviceCategory 1..1
 * serviceCategory from HnAppointmentServiceCategoryVS (required)
 * serviceCategory.coding obeys inv-4

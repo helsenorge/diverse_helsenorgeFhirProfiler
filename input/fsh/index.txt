@@ -103,6 +103,7 @@ inv-3                                                       Invariant   invarian
 inv-4                                                       Invariant   invariants\inv-4.fsh
 inv-a                                                       Invariant   invariants\inv-a.fsh
 must-be-max-1000-chars                                      Invariant   invariants\must-be-max-1000-chars.fsh
+must-be-max-250-chars                                       Invariant   invariants\must-be-max-250-chars.fsh
 community-services-location-not-both-ptres-and-of           Invariant   invariants\community-services-location-not-both-ptres-and-of.fsh
 community-services-location-requires-ptres-or-of            Invariant   invariants\community-services-location-requires-ptres-or-of.fsh
 community-services-requires-kommunikasjonspart-organization Invariant   invariants\community-services-requires-kommunikasjonspart-organization.fsh
