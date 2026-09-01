@@ -453,6 +453,8 @@
       {
         "id": "Appointment.cancelationReason.coding",
         "path": "Appointment.cancelationReason.coding",
+        "min": 1,
+        "max": "1",
         "constraint": [
           {
             "key": "inv-4",
@@ -460,6 +462,24 @@
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
             "expression": "code > '' implies (system > '' )"
+          }
+        ]
+      },
+      {
+        "id": "Appointment.cancelationReason.coding.code",
+        "path": "Appointment.cancelationReason.coding.code",
+        "min": 1
+      },
+      {
+        "id": "Appointment.cancelationReason.text",
+        "path": "Appointment.cancelationReason.text",
+        "constraint": [
+          {
+            "key": "must-be-max-250-chars",
+            "human": "Length MUST be <= 250",
+            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
+            "severity": "error",
+            "expression": "$this.length() <= 250"
           }
         ]
       },
