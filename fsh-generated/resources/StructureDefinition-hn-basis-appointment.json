@@ -38,7 +38,7 @@
             "human": "When serviceCategory is 27 or 30, every contained Location must have managingOrganization.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '27' or code = '30').empty() or      contained.ofType(Location).all(managingOrganization.exists())"
+            "expression": "serviceCategory.coding.where(code = '27' or code = '30').empty() or contained.ofType(Location).all(managingOrganization.exists())"
           },
           {
             "key": "hn-app-primary-2",
@@ -613,7 +613,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "type",
+              "type": "profile",
               "path": "resolve()"
             }
           ],
