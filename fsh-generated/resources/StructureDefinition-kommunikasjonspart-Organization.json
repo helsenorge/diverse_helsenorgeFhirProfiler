@@ -107,7 +107,7 @@
         "id": "Organization.identifier:RSH.system",
         "path": "Organization.identifier.system",
         "min": 1,
-        "fixedUri": "urn:oid:2.16.578.1.12.4.1.4.102"
+        "fixedUri": "urn:oid:2.16.578.1.12.4.1.2"
       },
       {
         "id": "Organization.identifier:RSH.value",

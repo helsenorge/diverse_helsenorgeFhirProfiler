@@ -129,14 +129,14 @@
             "human": "Every non-kommunikasjonspart Organization referenced from supportingInformation must have a HER-id level 2 identifier and must have partOf referencing an Organization with a HER-id level 1 identifier.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "supportingInformation.resolve().ofType(Organization).where(meta.profile != 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization').all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.102').exists() and partOf.exists() and partOf.resolve().ofType(Organization).exists() and partOf.resolve().ofType(Organization).all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.101').exists()))"
+            "expression": "supportingInformation.resolve().ofType(Organization).where(meta.profile != 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization').all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.2').exists() and partOf.exists() and partOf.resolve().ofType(Organization).exists() and partOf.resolve().ofType(Organization).all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.101').exists()))"
           },
           {
             "key": "community-services-requires-kommunikasjonspart-organization",
             "human": "For all serviceCategory values except 27 and 30, supportingInformation[kommunikasjonspart] must reference an Organization using a HER-id level 2 identifier system.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '27' or code = '30').exists() or supportingInformation.resolve().ofType(Organization).where(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.102').exists()).exists()"
+            "expression": "serviceCategory.coding.where(code = '27' or code = '30').exists() or supportingInformation.resolve().ofType(Organization).where(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.2').exists()).exists()"
           },
           {
             "key": "virtualservice-or-location-required",
