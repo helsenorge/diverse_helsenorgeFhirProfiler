@@ -20,8 +20,7 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
     community-services-no-dialog-flags and
     contained-flag-allowed-codes and
     serviceCategory-7-ptres-no-varsling-or-paminnelse and
-    supportinginformation-organization-partof and
-    community-services-requires-kommunikasjonspart-organization and
+    kommunikasjonspart-parent-organization and
     virtualservice-or-location-required and
     hn-app-proposed-only-servicecategory-7 and
     hn-app-entered-in-error-requires-start-and-end and
@@ -112,9 +111,9 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
     kommunikasjonspart 1..1 and
     documentReference 0..1 and
     flag 0..4
-* supportingInformation[kommunikasjonspart] only Reference(Organization)
+* supportingInformation[kommunikasjonspart] only Reference(KommunikasjonspartOrganization)
 * supportingInformation[kommunikasjonspart] ^short = "Kommunikasjonspart"
-* supportingInformation[kommunikasjonspart] ^definition = "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7. Else base organization is used tranfering both level 1 and level 2."
+* supportingInformation[kommunikasjonspart] ^definition = "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7."
 * supportingInformation[documentReference] only Reference(NoBasisDocumentReference)
 * supportingInformation[documentReference] ^short = "Document reference"
 * supportingInformation[documentReference] ^definition = "DocumentReference resource with supporting documentation for the appointment."
