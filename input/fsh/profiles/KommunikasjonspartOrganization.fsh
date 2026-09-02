@@ -39,7 +39,7 @@ Description: "Use case specific profile for Norwegian services defined in the No
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "coding.system"
 * type ^slicing.rules = #open
-* type 1..1
+* type 0..1
 * type from OrganizationType (example)
 * type ^alias[0] = "tjenestetype"
 * type ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
