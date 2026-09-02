@@ -27,7 +27,7 @@ Description: "Use case specific profile for Norwegian services defined in the No
 * identifier[ENH].value 1..
 * identifier[RSH] ..1
 * identifier[RSH].system 1..
-* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102" (exactly)
+* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.2" (exactly)
 * identifier[RSH].value 1..
 * identifier[HER] ^definition = "HER id for this tba-Organization, should be identified according to the predefined HERid naming system."
 * identifier[HER].system 1..
