@@ -4,7 +4,7 @@ Id: kommunikasjonspart-Organization
 Title: "kommunikasjonspart-Organization"
 Description: "Use case specific profile for Norwegian services defined in the Norwegian address register, kommunikasjonspart-Organization. Defined by The Norwegian Directorate of eHealth and HL7 Norway. The profile adds Norwegian specific identification of Healthcare services as defined in the Norwegian adress register. The use-case profile is specific for the use case of identifying relevant services defined in the address register for electronic communication."
 * ^version = "1.0.1"
-* ^status = #draft
+* ^status = #active
 * ^date = "2019-05-15"
 * . ^definition = "The details of a kommunikasjonspart (communication party) defined in the Norwegian Address Registry for Health care. \r\n\r\nOther kinds of healthcare services not registered in Adresseregisteret (clinical services) shold not use this profile. The standard HL7 Resource or the no-basis-HealthcareService can be used."
 * . ^comment = "Definition of \"kommunikasjonspart\" from the Standard HIS 1153-1:2016 (Norwegian text only):\r\nLogisk avgrenset del av en virksomhet i helse- og omsorgstjenesten, som sender og/eller mottar elektroniske meldinger.\r\nMerk 1: En kommunikasjonspart har alltid en HER-id.\r\nMerk 2: En kommunikasjonspart vil som hovedregel være knyttet til en tjenestetype."

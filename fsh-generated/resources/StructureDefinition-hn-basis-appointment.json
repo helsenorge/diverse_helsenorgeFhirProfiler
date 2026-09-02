@@ -414,7 +414,6 @@
       {
         "id": "Appointment.identifier.assigner",
         "path": "Appointment.identifier.assigner",
-        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -663,7 +662,7 @@
         "short": "Flag",
         "definition": "Flag resource with supporting flag information for the appointment.",
         "min": 0,
-        "max": "4",
+        "max": "*",
         "type": [
           {
             "code": "Reference",

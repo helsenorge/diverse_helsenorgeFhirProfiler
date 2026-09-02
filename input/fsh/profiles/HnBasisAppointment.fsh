@@ -72,9 +72,9 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
     HnBasisConsultationType named consultationType 0..0 MS and
     HnAvailabilityStatus named availabilityStatus 0..1 MS
 * identifier 1..1
-* identifier.system 1..
-* identifier.value 1..
-* identifier.assigner 1..
+* identifier.system 1..1
+* identifier.value 1..1
+* identifier.assigner 0..1
 * identifier.assigner only Reference(Organization or NoBasisOrganization)
 * status from $hn-appointment-status-vs (required)
 * cancelationReason from HnCancelationReasonVS (required)
@@ -110,7 +110,7 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * supportingInformation contains
     kommunikasjonspart 1..1 and
     documentReference 0..1 and
-    flag 0..4
+    flag 0..*
 * supportingInformation[kommunikasjonspart] only Reference(KommunikasjonspartOrganization)
 * supportingInformation[kommunikasjonspart] ^short = "Kommunikasjonspart"
 * supportingInformation[kommunikasjonspart] ^definition = "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7."
