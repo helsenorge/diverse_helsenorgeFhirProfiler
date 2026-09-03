@@ -613,7 +613,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "profile",
+              "type": "type",
               "path": "resolve()"
             }
           ],
