@@ -106,15 +106,14 @@ must-be-max-1000-chars                                      Invariant   invarian
 must-be-max-250-chars                                       Invariant   invariants\must-be-max-250-chars.fsh
 community-services-location-not-both-ptres-and-of           Invariant   invariants\community-services-location-not-both-ptres-and-of.fsh
 community-services-location-requires-ptres-or-of            Invariant   invariants\community-services-location-requires-ptres-or-of.fsh
-community-services-requires-kommunikasjonspart-organization Invariant   invariants\community-services-requires-kommunikasjonspart-organization.fsh
+kommunikasjonspart-parent-organization                      Invariant   invariants\kommunikasjonspart-parent-organization.fsh
 contained-flag-allowed-codes                                Invariant   invariants\contained-flag-allowed-codes.fsh
 hn-app-entered-in-error-requires-start-and-end              Invariant   invariants\hn-app-entered-in-error-requires-start-and-end.fsh
 hn-app-proposed-only-servicecategory-7                      Invariant   invariants\hn-app-proposed-only-servicecategory-7.fsh
 hn-app-reqperiod-2                                          Invariant   invariants\hn-app-reqperiod-2.fsh
 serviceCategory-7-ptres-no-varsling-or-paminnelse           Invariant   invariants\serviceCategory-7-ptres-no-varsling-or-paminnelse.fsh
 start-required-inv                                          Invariant   invariants\start-required-inv.fsh
-supportinginformation-organization-partof                   Invariant   invariants\supportinginformation-organization-partof.fsh
-supportinginformation-organization-partof Invariant invariants\supportinginformation-organization-partof.fsh
+participant-organization-partof                             Invariant   invariants\participant-organization-partof.fsh
 no-basis-apotekenes-konsesjonsnr                            Instance    instances\no-basis-apotekenes-konsesjonsnr.fsh
 no-basis-dnummer                                            Instance    instances\no-basis-dnummer.fsh
 no-basis-foedselsnummer                                     Instance    instances\no-basis-foedselsnummer.fsh

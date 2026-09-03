@@ -20,8 +20,7 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
     community-services-no-dialog-flags and
     contained-flag-allowed-codes and
     serviceCategory-7-ptres-no-varsling-or-paminnelse and
-    supportinginformation-organization-partof and
-    community-services-requires-kommunikasjonspart-organization and
+    kommunikasjonspart-parent-organization and
     virtualservice-or-location-required and
     hn-app-proposed-only-servicecategory-7 and
     hn-app-entered-in-error-requires-start-and-end and
@@ -73,9 +72,9 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
     HnBasisConsultationType named consultationType 0..0 MS and
     HnAvailabilityStatus named availabilityStatus 0..1 MS
 * identifier 1..1
-* identifier.system 1..
-* identifier.value 1..
-* identifier.assigner 1..
+* identifier.system 1..1
+* identifier.value 1..1
+* identifier.assigner 0..1
 * identifier.assigner only Reference(Organization or NoBasisOrganization)
 * status from $hn-appointment-status-vs (required)
 * cancelationReason from HnCancelationReasonVS (required)
@@ -104,17 +103,17 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * reasonReference ..0
 * priority ..0
 * description obeys must-be-max-1000-chars
-* supportingInformation ^slicing.discriminator.type = #type
+* supportingInformation ^slicing.discriminator.type = #profile
 * supportingInformation ^slicing.discriminator.path = "resolve()"
 * supportingInformation ^slicing.rules = #open
 * supportingInformation ^min = 0
 * supportingInformation contains
     kommunikasjonspart 1..1 and
     documentReference 0..1 and
-    flag 0..4
-* supportingInformation[kommunikasjonspart] only Reference(Organization)
+    flag 0..*
+* supportingInformation[kommunikasjonspart] only Reference(KommunikasjonspartOrganization)
 * supportingInformation[kommunikasjonspart] ^short = "Kommunikasjonspart"
-* supportingInformation[kommunikasjonspart] ^definition = "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7. Else base organization is used tranfering both level 1 and level 2."
+* supportingInformation[kommunikasjonspart] ^definition = "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7."
 * supportingInformation[documentReference] only Reference(NoBasisDocumentReference)
 * supportingInformation[documentReference] ^short = "Document reference"
 * supportingInformation[documentReference] ^definition = "DocumentReference resource with supporting documentation for the appointment."

@@ -38,7 +38,7 @@
             "human": "When serviceCategory is 27 or 30, every contained Location must have managingOrganization.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '27' or code = '30').empty() or      contained.ofType(Location).all(managingOrganization.exists())"
+            "expression": "serviceCategory.coding.where(code = '27' or code = '30').empty() or contained.ofType(Location).all(managingOrganization.exists())"
           },
           {
             "key": "hn-app-primary-2",
@@ -125,18 +125,11 @@
             "expression": "serviceCategory.coding.where(code = '7').empty() or contained.ofType(Location).where(type.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and code = 'PTRES').exists()).empty() or meta.tag.where(system = 'http://helsenorge.no/fhir/varsling' or system = 'http://helsenorge.no/fhir/paminnelse').empty()"
           },
           {
-            "key": "supportinginformation-organization-partof",
-            "human": "Every non-kommunikasjonspart Organization referenced from supportingInformation must have a HER-id level 2 identifier and must have partOf referencing an Organization with a HER-id level 1 identifier.",
+            "key": "kommunikasjonspart-parent-organization",
+            "human": "When serviceCategory is not 27 or 30, the kommunikasjonspart Organization referenced from supportingInformation shall have a partOf reference to a parent no-basis-Organization containing both an organization number and a HER-id.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "supportingInformation.resolve().ofType(Organization).where(meta.profile != 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization').all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.2').exists() and partOf.exists() and partOf.resolve().ofType(Organization).exists() and partOf.resolve().ofType(Organization).all(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.101').exists()))"
-          },
-          {
-            "key": "community-services-requires-kommunikasjonspart-organization",
-            "human": "For all serviceCategory values except 27 and 30, supportingInformation[kommunikasjonspart] must reference an Organization using a HER-id level 2 identifier system.",
-            "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
-            "severity": "error",
-            "expression": "serviceCategory.coding.where(code = '27' or code = '30').exists() or supportingInformation.resolve().ofType(Organization).where(identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.2').exists()).exists()"
+            "expression": "\nserviceCategory.coding.code.where($this = '27' or $this = '30').exists()\nor\nsupportingInformation.resolve().ofType(Organization)\n.where(meta.profile.exists($this = 'http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization'))\n.all(\n  partOf.exists()\n  and partOf.resolve().ofType(Organization).all(\n    meta.profile.exists($this = 'http://hl7.no/fhir/StructureDefinition/no-basis-Organization')\n    and identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.4.101').exists()\n    and identifier.where(system = 'urn:oid:2.16.578.1.12.4.1.2').exists()\n  )\n)\n"
           },
           {
             "key": "virtualservice-or-location-required",
@@ -421,7 +414,6 @@
       {
         "id": "Appointment.identifier.assigner",
         "path": "Appointment.identifier.assigner",
-        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -621,7 +613,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "type",
+              "type": "profile",
               "path": "resolve()"
             }
           ],
@@ -634,14 +626,14 @@
         "path": "Appointment.supportingInformation",
         "sliceName": "kommunikasjonspart",
         "short": "Kommunikasjonspart",
-        "definition": "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7. Else base organization is used tranfering both level 1 and level 2.",
+        "definition": "Kommunikasjonspart organization used to transfer HER-id level 2 for the communication partner when serviceCategory is not 7.",
         "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "http://helsenorge.no/fhir/StructureDefinition/kommunikasjonspart-Organization"
             ]
           }
         ]
@@ -670,7 +662,7 @@
         "short": "Flag",
         "definition": "Flag resource with supporting flag information for the appointment.",
         "min": 0,
-        "max": "4",
+        "max": "*",
         "type": [
           {
             "code": "Reference",
