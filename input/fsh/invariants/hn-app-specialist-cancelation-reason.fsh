@@ -4,7 +4,7 @@ Description: "Service categories 27 and 30 shall use Norwegian cancellation reas
 * expression =
   "(serviceCategory.coding.where(code='27' or code='30').exists()
   and status = 'cancelled'
-  and partOf.empty())
+  and extension('http://hl7.no/fhir/StructureDefinition/no-basis-partof').empty())
    implies
    cancelationReason.coding.where(
      system='urn:oid:2.16.578.1.12.4.1.1.8445'

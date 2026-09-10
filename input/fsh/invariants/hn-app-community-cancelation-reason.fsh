@@ -3,7 +3,7 @@ Description: "Cancelled appointments that are not service category 27 or 30 shal
 Severity: #error
 Expression: "
 (status = 'cancelled'
- and partOf.empty()
+ and extension('http://hl7.no/fhir/StructureDefinition/no-basis-partof').empty()
  and serviceCategory.coding.where(code = '27' or code = '30').empty())
 implies
 cancelationReason.coding.where(
