@@ -87,7 +87,7 @@
             "human": "For serviceCategory 27 or 30, every contained Location must have type HU or HOSP, and at least one HU and one HOSP Location must be present. The rule does not apply when Appointment.partOf is populated.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "\npartOf.exists() or\nserviceCategory.coding.where(code = '27' or code = '30').empty() or\n(\n  contained.ofType(Location).where(\n    type.coding.where(\n      system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and\n      code = 'HU'\n    ).exists()\n  ).exists()\n  and\n  contained.ofType(Location).where(\n    type.coding.where(\n      system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and\n      code = 'HOSP'\n    ).exists()\n  ).exists()\n)\n"
+            "expression": "\nextension('http://hl7.no/fhir/StructureDefinition/no-basis-partof').exists() or\nserviceCategory.coding.where(code = '27' or code = '30').empty() or\n(\n  contained.ofType(Location).where(\n    type.coding.where(\n      system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and\n      code = 'HU'\n    ).exists()\n  ).exists()\n  and\n  contained.ofType(Location).where(\n    type.coding.where(\n      system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode' and\n      code = 'HOSP'\n    ).exists()\n  ).exists()\n)\n"
           },
           {
             "key": "community-services-location-requires-ptres-or-of",
@@ -133,10 +133,10 @@
           },
           {
             "key": "virtualservice-or-location-required",
-            "human": "If virtualService extension is not present, at least one contained Location resource must be present.",
+            "human": "For appointments that are not part of another appointment, either virtual service or at least one Location must be present.",
             "source": "http://helsenorge.no/fhir/StructureDefinition/hn-basis-appointment",
             "severity": "error",
-            "expression": "extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists() or contained.ofType(Location).exists()"
+            "expression": "\nextension.where(\n  url='http://hl7.no/fhir/StructureDefinition/no-basis-partof'\n).exists()\nor\nextension.where(\n  url='http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service'\n).exists()\nor\ncontained.ofType(Location).exists()\n"
           },
           {
             "key": "hn-app-proposed-only-servicecategory-7",
