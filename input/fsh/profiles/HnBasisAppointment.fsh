@@ -123,10 +123,13 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * slot ..0
 * comment ..0
 * patientInstruction obeys must-be-max-1000-chars
-* participant obeys appointment-participant-actor-patient-reference-identifier and appointment-participant-actor-patient-reference-reference
 * participant.type.coding obeys inv-4
 * participant.actor 1..
 * participant.actor only Reference(NoBasisPatient or NoBasisPractitioner or NoBasisLocation or NoBasisPractitionerRole)
-* participant.actor ^short = "When actor is a Patient logical reference MUST be used"
-* participant.actor ^definition = "When actor is a Patient only logical reference MUST be used. In all other cases Logical, Literal reference, Relative, internal or absolute URL can be used"
-* requestedPeriod ..1
+* participant ^slicing.discriminator.type = #profile
+* participant ^slicing.discriminator.path = "actor.resolve()"
+* participant ^slicing.rules = #open
+* participant contains patient 0..1
+* participant[patient].actor only Reference(NoBasisPatient)
+* participant[patient].actor.identifier 1..1
+* obeys root-appointment-requires-patient

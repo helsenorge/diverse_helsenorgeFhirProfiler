@@ -90,8 +90,8 @@ ServiceRequestPerformerTypeVS                               ValueSet    valueset
 HnAvailabilityStatusVS                                      ValueSet    valuesets\HnAvailabilityStatusVS.fsh
 ServiceRequestStatusReason                                  Extension   extensions\ServiceRequestStatusReason.fsh
 TbaOrganizationcoverage                                     Extension   extensions\TbaOrganizationcoverage.fsh
-appointment-participant-actor-patient-reference-identifier  Invariant   invariants\appointment-participant-actor-patient-reference-identifier.fsh
-appointment-participant-actor-patient-reference-reference   Invariant   invariants\appointment-participant-actor-patient-reference-reference.fsh
+patient-must-have-identifier                                Invariant   invariants\patient-must-have-identifier.fsh
+root-appointment-requires-patient                           Invariant   invariants\root-appointment-requires-patient.fsh
 cancelationReason-inv                                       Invariant   invariants\cancelationReason-inv.fsh
 contained-location-must-have-managingorganization           Invariant   invariants\contained-location-must-have-managingorganization.fsh
 hn-app-primary-2                                            Invariant   invariants\hn-app-primary-2.fsh
