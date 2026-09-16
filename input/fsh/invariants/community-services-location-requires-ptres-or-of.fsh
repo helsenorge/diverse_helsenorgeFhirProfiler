@@ -15,8 +15,8 @@ Description: "For community services, contained Location must include PTRES or O
   code = '18' or
   code = '19'
 ).empty()
-or partOf.exists()
-or extension('http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service').exists()
+or extension('http://hl7.no/fhir/StructureDefinition/no-basis-partof').exists()
+or extension('http://hl7.no/fhir/StructureDefinition/no-basis-virtual-service').exists()
 or contained.ofType(Location).where(
      type.coding.where(
        system = 'http://terminology.hl7.org/CodeSystem/v3-RoleCode'

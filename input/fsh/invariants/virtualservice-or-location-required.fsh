@@ -7,7 +7,7 @@ extension.where(
 ).exists()
 or
 extension.where(
-  url='http://helsenorge.no/fhir/StructureDefinition/hn-basis-virtual-service'
+  url='http://hl7.no/fhir/StructureDefinition/no-basis-virtual-service'
 ).exists()
 or
 contained.ofType(Location).exists()
