@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8202.codesystem",
   "title": "8202 Type laboratoriemelding",
   "description": "Fagområde innen laboratoriemedisin og bildediagnstikk. Benyttes for å angi type svarrapport",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8202.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8202",
   "concept": [
     {
       "code": "BLD",

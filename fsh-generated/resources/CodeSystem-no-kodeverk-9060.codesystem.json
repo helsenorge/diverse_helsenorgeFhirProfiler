@@ -6,7 +6,7 @@
   "id": "no-kodeverk-9060.codesystem",
   "title": "9060 Kategori helsepersonell",
   "description": "Kodeverket inneholder koder som benyttes for å kategorisere helsepersonell med autorisasjon etter Helsepersonelloven § 48, og dyrehelsepersonell med autorisasjon etter Dyrehelsepersonelloven § 4.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-9060.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.9060",
   "concept": [
     {
       "code": "AA",

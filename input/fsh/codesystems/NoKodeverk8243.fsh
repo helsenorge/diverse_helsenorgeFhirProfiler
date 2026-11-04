@@ -4,6 +4,7 @@ Title: "8243 Type tekstsvar i tekstlig resultat i svarrapportering av medisinske
 Description: "Type tekstsvar i tekstlig resultat i svarrapportering av medisinske tjenester"
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8243"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8243"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

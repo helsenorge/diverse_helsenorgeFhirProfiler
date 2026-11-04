@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8275.codesystem",
   "title": "8275 Cytologisk materiale tatt med",
   "description": "Cytologisk materiale tatt med.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8275.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8275",
   "concept": [
     {
       "code": "BS",

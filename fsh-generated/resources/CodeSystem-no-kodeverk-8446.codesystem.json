@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8446.codesystem",
   "title": "8446 Utsettelseskode",
   "description": "Dette kodeverket inneholder koder som beskriver grunner for utsettelse.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8446.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8446",
   "concept": [
     {
       "code": "1",

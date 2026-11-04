@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8624.codesystem",
   "title": "8624 Organisatorisk betegnelse",
   "description": "Hvilken type enheten er, hva enheten kalles lokalt. Valg av term har ingen betydning for bestemmelse av nivå eller hierarkisk plassering. Betydningen av slike ord varierer mye fra organisasjon til organisasjon.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8624.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8624",
   "concept": [
     {
       "code": "01",

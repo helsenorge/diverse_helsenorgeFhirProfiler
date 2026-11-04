@@ -4,6 +4,7 @@ Title: "7617 Timetype innbyggerportal"
 Description: "Tilleggsopplysning til diagnose."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.7617"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.7617"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

@@ -4,6 +4,7 @@ Title: "8234 Type tekstsvar i kommentar til rekvisisjon og henvisning"
 Description: "Type tekstsvar i kommentar til rekvisisjon og henvisning. kodeverket har ikke noen beskrivelse."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8234"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8234"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

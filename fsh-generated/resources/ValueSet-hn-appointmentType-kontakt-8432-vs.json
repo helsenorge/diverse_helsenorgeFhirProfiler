@@ -7,7 +7,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8432.codesystem"
+        "system": "urn:oid:2.16.578.1.12.4.1.1.8434"
       }
     ]
   }

@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8351.codesystem",
   "title": "8351 Prøvemateriale",
   "description": "Kodeverk for prøvemateriale til bruk i rekvisisjon og svar av laboratorieundersøkelser.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8351.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8351",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",

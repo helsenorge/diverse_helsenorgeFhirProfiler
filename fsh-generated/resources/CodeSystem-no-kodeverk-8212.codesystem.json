@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8212.codesystem",
   "title": "8212 Uspesifisert laboratoriekodeverk",
   "description": "Dette kodeverk skal benyttes i tilfeller der det er uavklart hvilket type koder som skal være med i en melding. Kodeverket inneholder ingen koder",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8212.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8212",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",

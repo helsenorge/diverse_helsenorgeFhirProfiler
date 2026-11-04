@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8340.codesystem",
   "title": "8340 Tekstlige resultatverdier for mikrobiologiske svar",
   "description": "Kodeverk for tekstlig resultatverdier til bruk i svar av mikrobiologiske laboratorieundersøkelser.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8340.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8340",
   "concept": [
     {
       "code": "T001",

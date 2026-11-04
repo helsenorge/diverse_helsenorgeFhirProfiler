@@ -1,13 +1,14 @@
 CodeSystem: NoKodeverk9603
-Id: no-kodeverk-9603.codesystem
-Title: "9603 Sperring og nekting av dokumenter"
-Description: "Kodeverket benyttes for å angi sperring og nekting av dokumenter. Opprettet for bruk i HIS 1169:2016 IHE XDS metadata inntil en nasjonal løsning for tilgangsstyring/håndtering av sperring er etablert."
+Id: no-kodeverk-9603
+Title: "Helsenorge tilgangsbegrensning metatag code system"
+* ^status = #draft
+* ^content = #complete
+* ^version = "1.0.0"
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.9603"
-* ^version = "1.3.2"
-* ^status = #active
-* ^experimental = false
-* ^date = "2025-10-20T23:59:35+02:00"
-* ^jurisdiction = urn:iso:std:iso:3166#NO "Norway"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.9603"
 * ^caseSensitive = true
-* ^content = #not-present
+* ^count = 3
+* #N "N" "Normal (både foreldre og ungdom selv har tilgang)"
+* #NORN_FORANS "NORN_FORANS" "Nektet, foreldreansvarlig. (Kan kun ses av ungdommen selv (foreldre vil ikke kunne se dette informasjonselementet))"
+* #NORN_UNGDOM "NORN_UNGDOM" "Nektet, ungdom. (Kan kun ses av foreldre (ungdommen vil ikke kunne se dette informasjonselementet))"

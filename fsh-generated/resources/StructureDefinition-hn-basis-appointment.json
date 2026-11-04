@@ -549,6 +549,15 @@
       {
         "id": "Appointment.appointmentType.coding",
         "path": "Appointment.appointmentType.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
         "constraint": [
           {
             "key": "inv-4",
