@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8432.codesystem",
   "title": "8432 Kontakttype",
   "description": "Dette kodeverket inneholder koder som katogoriserer type kontakter. Gjelder for polikliniske konsultasjoner og dagbehandlinger etc.",
-  "url": "urn:oid:2.16.578.1.12.4.1.1.8432",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8434",
   "concept": [
     {
       "code": "1",
