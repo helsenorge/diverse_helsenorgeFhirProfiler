@@ -6,9 +6,9 @@ Usage: #example
 * identifier[0].value = "urn:uuid:123e4567-e89b-12d3-a456-426614174000"
 * serviceCategory[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/service-category"
 * serviceCategory[0].coding[0].code = #27
-* serviceType[0].coding[0].system = "http://helsenorge.no/fhir/CodeSystem/hn-scheduleAndSlot-type-cs"
+* serviceType[0].coding[0].system = "urn:oid:2.16.578.1.12.4.1.1.7617"
 * serviceType[0].coding[0].code = #Konsultasjon
-* appointmentType.coding[0].system = "http://helsenorge.no/fhir/CodeSystem/hn-scheduleAndSlot-type-cs"
+* appointmentType.coding[0].system = "urn:oid:2.16.578.1.12.4.1.1.7617"
 * appointmentType.coding[0].code = #Konsultasjon
 * schedule = Reference(Schedule/example-schedule-uuid)
 * status = #free

@@ -6,7 +6,7 @@
   "id": "no-kodeverk-7303.codesystem",
   "title": "7303 Svarrapporteringsprioritet",
   "description": "Svarrapporteringsprioritet. Kodeverket har ikke noen beskrivelse.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-7303.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.7303",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",

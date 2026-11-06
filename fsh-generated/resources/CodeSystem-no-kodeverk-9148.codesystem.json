@@ -6,7 +6,7 @@
   "id": "no-kodeverk-9148.codesystem",
   "title": "9148 Henvisning (elektronisk melding)",
   "description": "Henvisning (elektronisk melding).",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-9148.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.9148",
   "concept": [
     {
       "code": "1",

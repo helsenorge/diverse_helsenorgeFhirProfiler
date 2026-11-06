@@ -4,6 +4,7 @@ Title: "Avlysningskoder"
 Description: "Avlysningskoder i primærhelsetjenesten"
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.7621"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.7621"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = true

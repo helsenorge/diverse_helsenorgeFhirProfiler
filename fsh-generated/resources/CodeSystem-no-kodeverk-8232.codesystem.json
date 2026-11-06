@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8232.codesystem",
   "title": "8232 Forbehandling",
   "description": "Forberedelse før undersøkelse",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8232.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8232",
   "concept": [
     {
       "code": "PFP",

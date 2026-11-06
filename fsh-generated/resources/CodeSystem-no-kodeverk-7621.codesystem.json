@@ -6,7 +6,7 @@
   "id": "no-kodeverk-7621.codesystem",
   "title": "Avlysningskoder",
   "description": "Avlysningskoder i primærhelsetjenesten",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-7621.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.7621",
   "concept": [
     {
       "code": "AAT",

@@ -2,8 +2,8 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "HnBetingetTilgangsbegrensningCS",
-  "id": "hn-tilgangsbegrensning",
+  "name": "NoKodeverk9603",
+  "id": "no-kodeverk-9603",
   "title": "Helsenorge tilgangsbegrensning metatag code system",
   "url": "urn:oid:2.16.578.1.12.4.1.1.9603",
   "concept": [
@@ -24,6 +24,12 @@
     }
   ],
   "version": "1.0.0",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.578.1.12.4.1.1.9603"
+    }
+  ],
   "caseSensitive": true,
   "count": 3
 }

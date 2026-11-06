@@ -85,7 +85,7 @@
         "path": "Slot.serviceType",
         "binding": {
           "strength": "required",
-          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-scheduleandslot-type-vs"
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-inbygger-vs"
         }
       },
       {
@@ -119,7 +119,7 @@
         "path": "Slot.appointmentType",
         "binding": {
           "strength": "required",
-          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-scheduleandslot-type-vs"
+          "valueSet": "http://helsenorge.no/fhir/ValueSet/hn-appointment-type-inbygger-vs"
         }
       },
       {

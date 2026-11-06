@@ -4,6 +4,7 @@ Title: "7611 Representasjonsrolle."
 Description: "Dersom en innbygger benytter dialogtjenester på vegne av pasient fra helsenorge.no så skal informasjon om hvem som benytter tjeneste oppgis vha. objektet Pasientrelasjon. Pasienten oppgis som vanlig under patient-tagen i Hodemeldingen, mens personen som benytter en dialogtjeneste på vegne av pasienten skal oppgis i objektet Pasientrelasjon. Relasjon angir her representasjonsolle person som benytter tjeneste har til pasient."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.7611"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.7611"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

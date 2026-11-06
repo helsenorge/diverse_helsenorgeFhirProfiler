@@ -4,6 +4,7 @@ Title: "8445 Ventetid sluttkode"
 Description: "Dette kodeverket inneholder koder for avvikling."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8445"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8445"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

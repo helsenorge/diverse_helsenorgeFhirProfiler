@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8327.codesystem",
   "title": "8327 Offisiell personidentifikasjon",
   "description": "Angir type identifikator for person",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8327.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8327",
   "concept": [
     {
       "code": "DNR",

@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8116.codesystem",
   "title": "8116 ID-type for personer",
   "description": "Angir type identifikator for personer.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8116.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8116",
   "concept": [
     {
       "code": "FNR",

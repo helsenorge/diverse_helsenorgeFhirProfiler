@@ -4,6 +4,7 @@ Title: "8624 Organisatorisk betegnelse"
 Description: "Hvilken type enheten er, hva enheten kalles lokalt. Valg av term har ingen betydning for bestemmelse av nivå eller hierarkisk plassering. Betydningen av slike ord varierer mye fra organisasjon til organisasjon."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8624"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8624"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

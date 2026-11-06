@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8234.codesystem",
   "title": "8234 Type tekstsvar i kommentar til rekvisisjon og henvisning",
   "description": "Type tekstsvar i kommentar til rekvisisjon og henvisning. kodeverket har ikke noen beskrivelse.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8234.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8234",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",

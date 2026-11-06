@@ -6,7 +6,7 @@
   "id": "no-kodeverk-ICD-10.codesystem",
   "title": "ICD-10",
   "description": "Klassifikasjon av sykdommer og beslektede helseproblemer.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-ICD-10.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.7110",
   "identifier": [
     {
       "use": "official",

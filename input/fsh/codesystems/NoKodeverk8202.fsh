@@ -4,6 +4,7 @@ Title: "8202 Type laboratoriemelding"
 Description: "Fagområde innen laboratoriemedisin og bildediagnstikk. Benyttes for å angi type svarrapport"
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8202"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8202"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false
