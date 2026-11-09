@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8445.codesystem",
   "title": "8445 Ventetid sluttkode",
   "description": "Dette kodeverket inneholder koder for avvikling.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8445.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8445",
   "concept": [
     {
       "code": "1",

@@ -4,6 +4,7 @@ Title: "8116 ID-type for personer"
 Description: "Angir type identifikator for personer."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8116"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8116"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

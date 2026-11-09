@@ -6,7 +6,7 @@
   "id": "no-kodeverk-7305.codesystem",
   "title": "7305 Moderator",
   "description": "Tilleggsopplysning til diagnose.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-7305.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.7305",
   "concept": [
     {
       "code": "S",

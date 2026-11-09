@@ -26,7 +26,7 @@
     {
       "coding": [
         {
-          "system": "http://helsenorge.no/fhir/CodeSystem/hn-scheduleAndSlot-type-cs",
+          "system": "urn:oid:2.16.578.1.12.4.1.1.7617",
           "code": "Konsultasjon"
         }
       ]
@@ -35,7 +35,7 @@
   "appointmentType": {
     "coding": [
       {
-        "system": "http://helsenorge.no/fhir/CodeSystem/hn-scheduleAndSlot-type-cs",
+        "system": "urn:oid:2.16.578.1.12.4.1.1.7617",
         "code": "Konsultasjon"
       }
     ]

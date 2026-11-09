@@ -4,6 +4,7 @@ Title: "9033 Slektskap mv. til pasient"
 Description: "Dette kodeverket inneholder koder som benyttes for å angi hvilket slektskap eller annet forhold , det er mellom pasienten og den pårørende."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.9033"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.9033"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

@@ -4,6 +4,7 @@ Title: "8340 Tekstlige resultatverdier for mikrobiologiske svar"
 Description: "Kodeverk for tekstlig resultatverdier til bruk i svar av mikrobiologiske laboratorieundersøkelser."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8340"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8340"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8269.codesystem",
   "title": "8269 Kommentar til svarrapport",
   "description": "Kodet kommentar til svarrapport",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8269.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8269",
   "concept": [
     {
       "code": "TA",

@@ -93,12 +93,13 @@ Description: "Base profile for Helsenorge Appointment information. Defined by He
 * specialty.coding obeys inv-4
 * appointmentType 1..1
 * appointmentType.coding obeys inv-4
-* appointmentType.coding[omsorgsNiva]
-    from HnAppointmentTypeOmsorgsNivaVS (required)
-* appointmentType.coding[innbygger]
-    from HnAppointmentTypeInnbyggerVS (required)
-* appointmentType.coding[kontaktType]
-    from HnAppointmentTypeKontaktType8432VS (required)
+
+* appointmentType.coding ^slicing.discriminator.type = #value
+* appointmentType.coding ^slicing.discriminator.path = "$this"
+* appointmentType.coding ^slicing.rules = #closed
+* appointmentType.coding[omsorgsNiva] from HnAppointmentTypeOmsorgsNivaVS (required)
+* appointmentType.coding[kontaktType] from HnAppointmentTypeKontaktType8432VS (required)
+* appointmentType.coding[innbygger] from HnAppointmentTypeInnbyggerVS (required)
 * reasonCode ..0
 * reasonReference ..0
 * priority ..0

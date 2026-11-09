@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8231.codesystem",
   "title": "8231 Type tekstsvar",
   "description": "Begrunnelse for rekvisisjon/henvisning",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8231.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8231",
   "concept": [
     {
       "code": "BG",

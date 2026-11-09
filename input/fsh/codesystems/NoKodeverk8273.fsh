@@ -4,6 +4,7 @@ Title: "8273 Hastegrad"
 Description: "Anbefalt tidsperspektiv for tiltak."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8273"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8273"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

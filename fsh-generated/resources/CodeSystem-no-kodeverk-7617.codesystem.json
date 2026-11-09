@@ -6,7 +6,7 @@
   "id": "no-kodeverk-7617.codesystem",
   "title": "7617 Timetype innbyggerportal",
   "description": "Tilleggsopplysning til diagnose.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-7617.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.7617",
   "concept": [
     {
       "code": "Ordinær",

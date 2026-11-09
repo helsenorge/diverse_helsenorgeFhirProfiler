@@ -6,7 +6,7 @@
   "id": "no-kodeverk-8216.codesystem",
   "title": "8216 Kodeverk for cytologisk materiale",
   "description": "Gynekologisk materiale eller annet cytologisk materiale som er tatt for cytologiske undersøkelser. Kodene dekker opp valgmuligheter fra standard rekvisisjonsskjema for cytologiske undersøkelser.",
-  "url": "http://helsenorge.no/fhir/CodeSystem/no-kodeverk-8216.codesystem",
+  "url": "urn:oid:2.16.578.1.12.4.1.1.8216",
   "concept": [
     {
       "code": "VAG",

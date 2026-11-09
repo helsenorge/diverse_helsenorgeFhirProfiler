@@ -8,4 +8,4 @@ Description: "Koder for valgte profesjonstyper."
 * ^date = "2025-10-20T23:59:35+02:00"
 * ^jurisdiction = urn:iso:std:iso:3166#NO "Norway"
 * include codes from system SNOMED_CT where concept is-a #158965000
-* include codes from system urn:oid:2.16.578.1.12.4.1.1.9060
+* include codes from system NoKodeverk9060

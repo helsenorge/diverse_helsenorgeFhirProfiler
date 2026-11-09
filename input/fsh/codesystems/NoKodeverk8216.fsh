@@ -4,6 +4,7 @@ Title: "8216 Kodeverk for cytologisk materiale"
 Description: "Gynekologisk materiale eller annet cytologisk materiale som er tatt for cytologiske undersøkelser. Kodene dekker opp valgmuligheter fra standard rekvisisjonsskjema for cytologiske undersøkelser."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.8216"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.8216"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false

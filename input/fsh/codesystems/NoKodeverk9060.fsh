@@ -4,6 +4,7 @@ Title: "9060 Kategori helsepersonell"
 Description: "Kodeverket inneholder koder som benyttes for å kategorisere helsepersonell med autorisasjon etter Helsepersonelloven § 48, og dyrehelsepersonell med autorisasjon etter Dyrehelsepersonelloven § 4."
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:2.16.578.1.12.4.1.1.9060"
+* ^url = "urn:oid:2.16.578.1.12.4.1.1.9060"
 * ^version = "1.3.2"
 * ^status = #active
 * ^experimental = false
