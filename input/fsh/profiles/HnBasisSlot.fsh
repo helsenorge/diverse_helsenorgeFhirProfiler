@@ -12,12 +12,7 @@ Description: "Profil for slot i Helsenorge. Basert på FHIR Slot (R4)"
 * identifier.system 1..
 * identifier.value 1..
 * identifier.assigner only Reference(Organization or NoBasisOrganization)
-* serviceCategory 1..1
+* serviceCategory 0..1
 * serviceCategory from ServiceCategory (preferred)
-* serviceCategory.coding obeys inv-4
-* serviceType from HnAppointmentTypeInnbyggerVS (required)
-* serviceType.coding obeys inv-4
-* specialty.coding obeys inv-4
-* appointmentType from HnAppointmentTypeInnbyggerVS (required)
-* appointmentType.coding obeys inv-4
+* appointmentType from HnAppointmentTypeInnbyggerVS
 * schedule only Reference(Schedule or HnBasisSchedule)

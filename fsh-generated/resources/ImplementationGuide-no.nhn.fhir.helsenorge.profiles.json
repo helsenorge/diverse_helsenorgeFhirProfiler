@@ -800,6 +800,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/hn-basis-requested-slot"
+        },
+        "name": "Requested Slot",
+        "description": "Reference to the HnBasisSlot selected when requesting a change of appointment.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/serviceRequest-category-vs"
         },
         "name": "ServiceRequest Category Value Set",
