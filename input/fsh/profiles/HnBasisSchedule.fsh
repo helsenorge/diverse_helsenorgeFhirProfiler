@@ -4,9 +4,11 @@ Id: hn-basis-schedule
 Title: "HnBasisSchedule"
 Description: "FHIR Schedule brukes for å hente timebøker tilgjengelige for timebestilling for innbygger. Profilen er basert på R4."
 * ^version = "1.3.2"
-* ^status = #draft
+* ^status = #active
 * ^jurisdiction = urn:iso:std:iso:3166#NO "Norway"
-* extension contains HnExtensionFreeSlotPlanningHorizon named freeSlotPlanningHorizon 0..1 MS
+* extension contains HnExtensionFreeSlotPlanningHorizon named freeSlotPlanningHorizon 0..1
+* extension[freeSlotPlanningHorizon] ^short = "DEPRECATED: Free slot planning horizon"
+* extension[freeSlotPlanningHorizon] ^definition = "Deprecated. Retained for backwards compatibility. This extension SHALL NOT be used in new implementations."
 * identifier 1..1
 * identifier ^short = "Identifer must be UUID/GUID"
 * identifier ^definition = "Identifer must be UUID/GUID"

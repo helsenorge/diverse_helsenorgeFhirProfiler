@@ -5,7 +5,7 @@
   "version": "1.0.1",
   "name": "HnBasisAppointmentResponse",
   "title": "hn-basis-AppointmentResponse",
-  "status": "draft",
+  "status": "active",
   "description": "Basisprofil for AppointmentResponse used in 'ny timeløsning'.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -35,6 +35,23 @@
         "id": "AppointmentResponse.extension:changeConferenceType.value[x]",
         "path": "AppointmentResponse.extension.value[x]",
         "definition": "Type of conference that Patient askes for"
+      },
+      {
+        "id": "AppointmentResponse.extension:requestedSlot",
+        "path": "AppointmentResponse.extension",
+        "sliceName": "requestedSlot",
+        "short": "Requested Slot for appointment change",
+        "definition": "Reference to the HnBasisSlot selected by the patient when requesting a change of appointment.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://helsenorge.no/fhir/StructureDefinition/hn-basis-requested-slot"
+            ]
+          }
+        ]
       },
       {
         "id": "AppointmentResponse.identifier",

@@ -85,6 +85,7 @@ NoKodeverkICD10                                             CodeSystem  codesyst
 HnAvailabilityStatusCS                                      CodeSystem  codesystems\HnAvailabilityStatusCS.fsh
 NoMottattDato                                               Extension   extensions\NoMottattDato.fsh
 NoVurdertDato                                               Extension   extensions\NoVurdertDato.fsh
+HnBasisRequestedSlot                                        Extension   extensions\HnBasisRequestedSlot.fsh
 ServiceRequestCategoryVS                                    ValueSet    valuesets\ServiceRequestCategoryVS.fsh
 ServiceRequestPerformerTypeVS                               ValueSet    valuesets\ServiceRequestPerformerTypeVS.fsh
 HnAvailabilityStatusVS                                      ValueSet    valuesets\HnAvailabilityStatusVS.fsh
